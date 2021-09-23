@@ -1,6 +1,17 @@
 # Prerequisites
 *.d
 
+# metadatos de Eclipse y otros
+**/bin
+*.bak
+**/*.class
+.* 
+**/.* 
+/entregas/
+!.gitignore 
+
+
+
 # Compiled Object files
 *.slo
 *.lo

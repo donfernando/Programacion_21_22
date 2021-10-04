@@ -2,23 +2,23 @@ package iesdomingoperezminik;
 import java.util.Scanner;
 
 public class Media3Valores {
-
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
-
 		// Variables
 		double media;
-		
 		int suma = 0;
-
-		// Acumulador
+		int num, i;
+		
+		
 		System.out.print("Introduce 3 números: ");
-		for (int i = 1; i <= 3; i=i+1) {
-			suma = suma + entrada.nextInt();
+		i = 1;
+		while(i <= 3) {
+		//for (; i <= 3;) {
+			num = entrada.nextInt();
+			suma = suma + num;
+			i=i+1;
 		}
-
 		media = suma / 3.0;
-
 		// Salida Pantalla
 		System.out.println("El resultado de la suma es = " + suma);
 		System.out.printf("La media es %.2f, de los números introducidos.\n", media);

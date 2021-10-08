@@ -18,7 +18,10 @@ public class Portero {
 			calzadoAdecuado = entrada.nextBoolean();
 			System.out.print("Cuántos son:: ");
 			cuantosSon = entrada.nextInt();
-			entran = edad >= 14 && edad <= 55 && altura > 1.25f && calzadoAdecuado && cuantosSon <= 6;
+			entran = edad >= 14 && edad <= 55 &&
+					 altura > 1.25f &&
+					 calzadoAdecuado &&
+					 cuantosSon <= 6;
 			if (entran)
 				System.out.println("Adelante...");
 			else

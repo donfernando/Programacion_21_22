@@ -1,7 +1,7 @@
 package iesdomingoperezminik.bloque3;
 import java.util.Scanner;
 
-public class PruebasTablas {
+public class PruebaTablas {
 	static Scanner entrada= new Scanner(System.in);
 	public static void main(String[] args) {
 		int[] edades;

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ContadorCircular
+comment1.params=nuevoTope
+comment1.target=void\ setTope(int)
+comment2.params=nuevoValor
+comment2.target=void\ set(int)
+comment3.params=
+comment3.target=int\ get()
+comment4.params=
+comment4.target=void\ incrementar()
+numComments=5

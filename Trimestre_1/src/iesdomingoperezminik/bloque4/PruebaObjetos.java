@@ -6,6 +6,7 @@ public class PruebaObjetos {
 	public static void main(String[] args) {
 		
 		Ficha[] misAmigos;
+		Ficha elPrimero;
 		int i, sumaEdades;
 		float media;
 		
@@ -19,8 +20,6 @@ public class PruebaObjetos {
 		misAmigos[2].nombre = "Alba";
 		misAmigos[3].nombre = "Elsa";
 
-		
-		misAmigos[0].setNombre("Pedro");
 		
 		
 		System.out.println("Dime las edades correspondientes...");
@@ -38,6 +37,9 @@ public class PruebaObjetos {
 		media = sumaEdades / (float)misAmigos.length;
 		System.out.printf("(REG) La edad media es %.3f", media);
 		
-		
+		elPrimero = misAmigos[0];
+		System.out.printf("El primero de mis amigos tiene %d años.\n",elPrimero.getEdad());
 	}
 }
+
+

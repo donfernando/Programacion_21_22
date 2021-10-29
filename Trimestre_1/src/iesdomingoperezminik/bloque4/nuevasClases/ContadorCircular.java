@@ -1,8 +1,9 @@
 package iesdomingoperezminik.bloque4.nuevasClases;
 
+
 public class ContadorCircular {
 	private int valor;
-	private int tope;
+	private int tope=10;
 	
 	public void setTope(int nuevoTope) {
 		if(nuevoTope>=1) {

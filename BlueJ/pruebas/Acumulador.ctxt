@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Acumulador
+comment1.params=nuevoValor
+comment1.target=void\ mas(double)
+comment2.params=nuevoValor
+comment2.target=void\ menos(double)
+comment3.params=nuevoValor
+comment3.target=void\ por(double)
+comment4.params=nuevoValor
+comment4.target=void\ entre(double)
+comment5.params=
+comment5.target=void\ reset()
+comment6.params=
+comment6.target=double\ get()
+comment7.params=
+comment7.target=void\ mostrar()
+numComments=8

@@ -1,17 +1,20 @@
 #BlueJ class context
 comment0.target=Acumulador
-comment1.params=nuevoValor
-comment1.target=void\ mas(double)
+comment1.params=valorInicial
+comment1.target=Acumulador(double)
+comment1.text=\n\tpublic\ Acumulador()\ {\n\t\texp\ \=\ new\ StringBuffer(String.format("%.2f",0.0));\n\t}\n
 comment2.params=nuevoValor
-comment2.target=void\ menos(double)
+comment2.target=void\ mas(double)
 comment3.params=nuevoValor
-comment3.target=void\ por(double)
+comment3.target=void\ menos(double)
 comment4.params=nuevoValor
-comment4.target=void\ entre(double)
-comment5.params=
-comment5.target=void\ reset()
+comment4.target=void\ por(double)
+comment5.params=nuevoValor
+comment5.target=void\ entre(double)
 comment6.params=
-comment6.target=double\ get()
+comment6.target=void\ reset()
 comment7.params=
-comment7.target=void\ mostrar()
-numComments=8
+comment7.target=double\ get()
+comment8.params=
+comment8.target=void\ mostrar()
+numComments=9

@@ -1,9 +1,19 @@
-package iesdomingoperezminik.bloque4.nuevasClases;
+package iesdomingoperezminik.bloque4.contruct;
 
 public class Acumulador {
 	private double valor;
-	private StringBuffer exp = new StringBuffer("0");
+	private StringBuffer exp;
+
+	/*
+	public Acumulador() {
+		exp = new StringBuffer(String.format("%.2f",0.0));
+	}
+	*/
 	
+	public Acumulador(double valorInicial) {
+		valor=valorInicial;
+		exp = new StringBuffer(String.format("%.2f",valorInicial));
+	}
 	
 	public void mas(double nuevoValor) {		
 		if (nuevoValor >= 0) {
@@ -32,8 +42,8 @@ public class Acumulador {
 
 	public void reset() {
 		valor = 0;
-		exp.setLength(1);
-		//exp.append(0);
+		exp.setLength(0);
+		exp.append(0);
 	}
 
 	public double get() {

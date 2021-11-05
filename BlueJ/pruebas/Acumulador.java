@@ -1,34 +1,48 @@
+
 public class Acumulador {
 	private double valor;
-	private String exp = "0";
+	private StringBuffer exp;
 
-	public void mas(double nuevoValor) {
+	/*
+	public Acumulador() {
+		exp = new StringBuffer(String.format("%.2f",0.0));
+	}
+	*/
+	
+	public Acumulador(double valorInicial) {
+		valor=valorInicial;
+		exp = new StringBuffer(String.format("%.2f",valorInicial));
+	}
+	
+	public void mas(double nuevoValor) {		
 		if (nuevoValor >= 0) {
 			valor = valor + nuevoValor;
-			exp = exp + String.format(" + %.2f",nuevoValor);
+			exp.append(String.format(" + %.2f",nuevoValor));
+//			exp.append(" + "+nuevoValor);
 		}
 	}
 
 	public void menos(double nuevoValor) {
 		if (nuevoValor >= 0) {
 			valor = valor - nuevoValor;
-			exp = exp + String.format(" - %.2f",nuevoValor);
+			exp.append(String.format(" - %.2f",nuevoValor));
 		}
 	}
 
 	public void por(double nuevoValor) {
 		valor = valor * nuevoValor;
-		exp = exp + String.format(" x %.2f",nuevoValor);
+		exp.append(String.format(" x %.2f",nuevoValor));
 	}
 
 	public void entre(double nuevoValor) {
 		valor = valor / nuevoValor;
-		exp = exp + String.format(" / %.2f",nuevoValor);
+		exp.append(String.format(" / %.2f",nuevoValor));
 	}
 
 	public void reset() {
 		valor = 0;
-		exp = "0";
+		exp.setLength(0);
+		exp.append(0);
 	}
 
 	public double get() {

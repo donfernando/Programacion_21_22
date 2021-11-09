@@ -14,7 +14,7 @@ public class PruebaPunto {
 		p.desplazar(0, -3);
 		p.mostrar();
 	//	System.out.println("Distancia: "+p.distancia());
-		p.x
+	
 	}
 
 }

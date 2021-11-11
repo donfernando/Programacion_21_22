@@ -9,9 +9,9 @@ public class PruebaPuntoPantalla_2 {
 		v1= new PuntoPantalla(10, 10);
 		v2= new PuntoPantalla(30, 20);
 
-		System.out.println("pp1: "+v1.toString());
-		System.out.println("pp2: "+v2.toString());
-		System.out.println("distancia entre v1 y v2: "+v1.distancia(v2));
+		System.out.println("v1: "+v1.toString());
+		System.out.println("v2: "+v2.toString());
+		System.out.printf("Distancia entre v1 y v2: %.2f\n",v1.distancia(v2));
 		
 		
 		

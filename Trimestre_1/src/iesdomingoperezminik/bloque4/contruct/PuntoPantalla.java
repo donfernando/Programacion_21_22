@@ -43,10 +43,12 @@ public class PuntoPantalla {
 
 	public double distancia(PuntoPantalla otro) {
 		int dx, dy;
+		double dist;
+		
 		dx = this.x - otro.x;
 		dy = this.y - otro.y;
-		double distancia = Math.sqrt(dx * dx + dy * dy);
-		return distancia;
+		dist = Math.sqrt(dx * dx + dy * dy);
+		return dist;
 	}
 	
 

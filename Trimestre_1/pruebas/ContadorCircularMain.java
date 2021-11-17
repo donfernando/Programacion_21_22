@@ -5,7 +5,6 @@ public class ContadorCircularMain {
 	static Scanner entrada = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ContadorCircular c;
 		int eleccion,pos;
 		c = new ContadorCircular();

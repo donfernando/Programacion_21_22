@@ -18,7 +18,7 @@ public class PruebaEjercicioBalonvolea2 {
 		System.out.println(eqB);
 		eqB.incrementarPuntosLiga(5);
 		eqB.incrementarPuntosLiga(2);
-		eqB.incrementarPuntosLiga(12);
+		eqB.incrementarPuntosLiga(12); // puntos ilegales (fuera del rango de 1 a 9)
 		System.out.println(eqB);
 
 		

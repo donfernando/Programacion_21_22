@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="iesdomingoperezminik.bloque4.contruct.PuntoPantalla" project="Trimestre_1" 
-    file="/Trimestre_1/src/iesdomingoperezminik/bloque4/contruct/PuntoPantalla.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="169" y="178"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="2" language="java" name="iesdomingoperezminik.bloque4.ejercicios.Equipo" project="Trimestre_1" 
+  <class id="1" language="java" name="iesdomingoperezminik.bloque4.ejercicios.Equipo" project="Trimestre_1" 
     file="/Trimestre_1/src/iesdomingoperezminik/bloque4/ejercicios/Equipo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="172" width="200" x="537" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -20,35 +10,26 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="iesdomingoperezminik.bloque4.ejercicios.Jugador" project="Trimestre_1" 
+  <class id="2" language="java" name="iesdomingoperezminik.bloque4.ejercicios.Jugador" project="Trimestre_1" 
     file="/Trimestre_1/src/iesdomingoperezminik/bloque4/ejercicios/Jugador.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="898" y="341"/>    
+    <position height="-1" width="-1" x="351" y="321"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="4">    
-    <bendpoint x="637" y="339"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="5" name="suEquipo">        
-        <position height="18" width="60" x="646" y="342"/>      
+  <association id="3">    
+    <bendpoint x="409" y="93"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="4" name="jugadores">        
+        <position height="18" width="63" x="319" y="136"/>      
       </attribute>      
-      <multiplicity id="6" minimum="0" maximum="1"/>    
+      <multiplicity id="5" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-492" y="-28"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="7">    
-    <bendpoint x="899" y="126"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="8" name="jugadores">        
-        <position height="18" width="63" x="811" y="164"/>      
-      </attribute>      
-      <multiplicity id="9" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

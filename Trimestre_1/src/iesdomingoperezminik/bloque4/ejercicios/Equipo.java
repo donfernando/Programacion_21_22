@@ -8,12 +8,21 @@ public class Equipo {
 	private int partidos;
 	private int puntosLiga;
 	
+	private boolean dorsalYaExiste(int dorsal) {
+		int pos=0;
+		while(pos < numJugadores-1 && dorsal != jugadores[pos].getDorsal()) {
+			pos++;
+		}
+		return dorsal == jugadores[pos].getDorsal();
+	}
+	
 	/**
 	 * Inicializa el nombre del equipo y todo aquello que sea preciso.
 	 */
 	public Equipo(String nombre) {
 		this.nombre=nombre;
 		jugadores = new Jugador[15];
+		// numJugadores=0;
 	}
 	/**
 	 * @return Número de Jugadores
@@ -22,7 +31,9 @@ public class Equipo {
 		return numJugadores;
 	}
 	/**
-	 * @return El objeto jugador 'pos' de la lista de jugadores
+	 * @return El objeto jugador 'pos' de la lista de jugadores.
+	 * pos es una posicion de 0 en adelante.
+	 * Si no existe ese jugador se retorna null
 	 */
 	public Jugador getJugador(int pos) {
 		// TODO pendiente de implementacion
@@ -32,6 +43,9 @@ public class Equipo {
 	 * @param Añade un nuevo jugador al equipo
 	 */
 	public void contratarJugador(Jugador jugador) {
+		// Añadir a mi lista de jugadores a "jugador"
+		// Pedir al jugador jugador que se apunte que 
+		//   yo (this) soy su equipo.
 		// TODO pendiente de implementacion
 	}
 	/**
@@ -91,10 +105,10 @@ public class Equipo {
 		int i;
 		String r = "Equipo: "+nombre+"\n";
 		r += "\tPartidos jugados: "+partidos+"\n";
-		r += "\tPunto: "+puntosLiga+"\n";
+		r += "\tPuntos: "+puntosLiga+"\n";
 		
 		for (i = 0; i < numJugadores; i++) {
-			r += "\t- "+jugadores[i].getNombre();
+			r += "\t- "+jugadores[i].getNombre()+"\n";
 		}
 		return r;
 	}

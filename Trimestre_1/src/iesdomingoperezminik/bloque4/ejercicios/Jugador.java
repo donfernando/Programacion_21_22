@@ -4,7 +4,7 @@ public class Jugador {
 	private String nombre;
 	private int dorsal;
 	private float estatura;
-	private Equipo suEquipo;
+//	private Equipo suEquipo;
 	public boolean lesionado;
 	/**
 	 * Se le debe facilitar el nombre, su estatura y el dorsal.
@@ -32,7 +32,6 @@ public class Jugador {
 	}
 	/**
 	 * Se asigna nuevo dorsal.
-	 * (opcional)....comprobar que en su equipo (si lo tiene) nadie tenga este dorsal.
 	 */
 	public void setDorsal(int dorsal) {
 		this.dorsal=dorsal;
@@ -53,12 +52,11 @@ public class Jugador {
 	 * se le asigne un equipo en el que algun jugador tenga asignado su dorsal
 	 */
 	public void setSuEquipo(Equipo suEquipo) {
-		this.suEquipo = suEquipo;
+		//this.suEquipo = suEquipo;
 	}
 	
-	
 	public String toString() {
-		return String.format("Jug(%s, alt: %.2fm., dorsal: %d)", nombre, estatura, dorsal);
+		return String.format("%s (alt: %.2f m., dorsal: %d)", nombre, estatura, dorsal);
 	}
 	
 }

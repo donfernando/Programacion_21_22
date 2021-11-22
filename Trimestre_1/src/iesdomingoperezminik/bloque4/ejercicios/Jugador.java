@@ -4,7 +4,7 @@ public class Jugador {
 	private String nombre;
 	private int dorsal;
 	private float estatura;
-//	private Equipo suEquipo;
+	private Equipo miEquipo;
 	public boolean lesionado;
 	/**
 	 * Se le debe facilitar el nombre, su estatura y el dorsal.
@@ -33,8 +33,18 @@ public class Jugador {
 	/**
 	 * Se asigna nuevo dorsal.
 	 */
-	public void setDorsal(int dorsal) {
-		this.dorsal=dorsal;
+	public void setDorsal(int dorsalNuevo) {
+		int iJug;
+		if(miEquipo==null)
+			this.dorsal=dorsalNuevo;
+		else {
+			iJug=0;
+			while(iJug < miEquipo.getJugadores()-1 && 
+				  dorsalNuevo!=miEquipo.getJugador(iJug).getDorsal())
+				iJug++;
+			if(dorsalNuevo!=miEquipo.getJugador(iJug).getDorsal())
+				this.dorsal=dorsalNuevo;
+		}
 	}
 	
 	/**
@@ -48,11 +58,15 @@ public class Jugador {
 	/**
 	 * Inicialmente el jugador no tiene equipo hasta que se la asigna.
 	 * Mientras un jugador está lesionado, no se le puede asignar ni cambiar de equipo.
-	 * (opcional)...impedir que a un jugador
-	 * se le asigne un equipo en el que algun jugador tenga asignado su dorsal
+	 * 
+	 * Este funcion se entiende que será llamada solo desde un objeto Equipo
 	 */
-	public void setSuEquipo(Equipo suEquipo) {
-		//this.suEquipo = suEquipo;
+	public void setSuEquipo(Equipo equipo) {
+		if(!lesionado) {
+			if(this.miEquipo!=null)
+				this.miEquipo.despedirJugador(dorsal);
+			this.miEquipo = equipo;
+		}
 	}
 	
 	public String toString() {

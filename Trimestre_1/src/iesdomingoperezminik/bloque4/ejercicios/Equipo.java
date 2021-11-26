@@ -14,7 +14,7 @@ public class Equipo {
 		int pos = 0;
 		boolean existe;
 		if (jugadores.size() != 0) {
-			while (pos < jugadores.size() - 1 && dorsal != jugadores.get(pos).getDorsal()) {
+			while (pos < jugadores.size() - 1 & dorsal != jugadores.get(pos).getDorsal()) {
 				pos++;
 			}
 			existe = (dorsal == jugadores.get(pos).getDorsal());
@@ -22,6 +22,13 @@ public class Equipo {
 			existe = false;
 		return existe;
 	}
+
+	/*
+	 * Busqueda Lineal Alternativa private boolean dorsalYaExiste(int dorsal) { int
+	 * pos = 0; boolean existe; while (pos < jugadores.size() && dorsal !=
+	 * jugadores.get(pos).getDorsal()) { pos++; } existe = pos<jugadores.size();
+	 * return existe; }
+	 */
 
 	/**
 	 * Inicializa el nombre del equipo y todo aquello que sea preciso.
@@ -70,7 +77,8 @@ public class Equipo {
 	}
 
 	/**
-	 * @param Elimina del equipo el jugador cuyo dorsal se le indica.
+	 * @param Elimina del equipo el jugador cuyo dorsal se le indica.<br/>
+	 *                Es llamada por el propio jugador no desde fuera.
 	 */
 	public void despedirJugador(int dorsal) {
 		int pos = 0;
@@ -79,6 +87,8 @@ public class Equipo {
 				pos++;
 			}
 			if (dorsal == jugadores.get(pos).getDorsal()) {
+				// TODO Error de llamadas recurrentes.
+				// jugadores.get(pos).setSuEquipo(null);
 				jugadores.remove(pos);
 			}
 		}
@@ -144,8 +154,7 @@ public class Equipo {
 		r += "\tPuntos: " + puntosLiga + "\n";
 
 		for (i = 0; i < jugadores.size(); i++) {
-			r += "\t- " + jugadores.get(i).getNombre() +
-					"("+ jugadores.get(i).getDorsal() +")\n";
+			r += "\t- " + jugadores.get(i).getNombre() + "(" + jugadores.get(i).getDorsal() + ")\n";
 		}
 		return r;
 	}

@@ -64,7 +64,7 @@ public class Jugador {
 	public void setSuEquipo(Equipo equipo) {
 		if(!lesionado) {
 			if(this.miEquipo!=null)
-				this.miEquipo.despedirJugador(dorsal);
+				this.miEquipo.despedirJugador(this.dorsal);
 			this.miEquipo = equipo;
 		}
 	}

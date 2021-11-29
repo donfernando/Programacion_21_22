@@ -1,6 +1,6 @@
 
-import iesdomingoperezminik.bloque4.ejercicios.Equipo;
-import iesdomingoperezminik.bloque4.ejercicios.Jugador;
+import dpm.bloque4.ejercicios.Equipo;
+import dpm.bloque4.ejercicios.Jugador;
 
 public class PruebaEjercicioBalonvolea2 {
 

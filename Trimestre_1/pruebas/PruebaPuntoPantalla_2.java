@@ -1,5 +1,5 @@
-import iesdomingoperezminik.bloque4.contruct.Punto;
-import iesdomingoperezminik.bloque4.contruct.PuntoPantalla;
+import dpm.bloque4.contruct.Punto;
+import dpm.bloque4.contruct.PuntoPantalla;
 
 public class PruebaPuntoPantalla_2 {
 

@@ -1,5 +1,6 @@
 import java.util.Scanner;
-import iesdomingoperezminik.bloque4.nuevasClases.ContadorCircular;
+
+import dpm.bloque4.nuevasClases.ContadorCircular;
 
 public class ContadorCircularMain {
 	static Scanner entrada = new Scanner(System.in);

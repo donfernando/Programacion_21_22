@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="iesdomingoperezminik.bloque4.ejercicios.Equipo" project="Trimestre_1" 
-    file="/Trimestre_1/src/iesdomingoperezminik/bloque4/ejercicios/Equipo.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="dpm.bloque4.ejercicios.Equipo" project="Trimestre_1" 
+    file="/Trimestre_1/src/dpm/bloque4/ejercicios/Equipo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="172" width="200" x="537" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="iesdomingoperezminik.bloque4.ejercicios.Jugador" project="Trimestre_1" 
-    file="/Trimestre_1/src/iesdomingoperezminik/bloque4/ejercicios/Jugador.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="dpm.bloque4.ejercicios.Jugador" project="Trimestre_1" 
+    file="/Trimestre_1/src/dpm/bloque4/ejercicios/Jugador.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="351" y="321"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      

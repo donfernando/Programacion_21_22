@@ -1,4 +1,4 @@
-import iesdomingoperezminik.bloque4.contruct.Punto;
+import dpm.bloque4.contruct.Punto;
 
 public class PruebaPunto {
 

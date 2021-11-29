@@ -1,5 +1,5 @@
-import iesdomingoperezminik.bloque4.contruct.PuntoPantalla;
-import iesdomingoperezminik.bloque4.contruct.Triangulo;
+import dpm.bloque4.contruct.PuntoPantalla;
+import dpm.bloque4.contruct.Triangulo;
 
 public class PruebaTriangulo {
 

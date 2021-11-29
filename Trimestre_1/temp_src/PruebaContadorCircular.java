@@ -1,4 +1,4 @@
-import iesdomingoperezminik.bloque4.nuevasClases.ContadorCircular;
+import dpm.bloque4.nuevasClases.ContadorCircular;
 
 public class PruebaContadorCircular {
 

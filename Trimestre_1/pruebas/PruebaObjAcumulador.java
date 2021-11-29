@@ -1,4 +1,4 @@
-import iesdomingoperezminik.bloque4.nuevasClases.Acumulador;
+import dpm.bloque4.nuevasClases.Acumulador;
 
 public class PruebaObjAcumulador {
 	public static void main(String[] args) {

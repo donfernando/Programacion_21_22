@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Ordenacion
+comment0.text=\n\ Ordenacion\ de\ datos.\n\ Algoritmo\ de\ Intercambio\ Directo\n\ \n\ @author\ Fernando\ Toboso\ \n\ @version\ 1.0\n
+comment1.params=miPanel\ x\ y
+comment1.target=Ordenacion(Panel,\ int,\ int)
+comment2.params=miPanel\ x\ y\ fichas
+comment2.target=Ordenacion(Panel,\ int,\ int,\ Ficha[])
+comment3.params=posActual
+comment3.target=void\ destaca(int)
+numComments=4

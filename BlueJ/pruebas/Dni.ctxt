@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Dni
+comment1.params=
+comment1.target=int\ getNumero()
+comment1.text=\n\ Permite\ obtener\ el\ valor\ del\ n\u00FAmero\ del\ dni\ (sin\ letra)\n\ \n\ @return\ El\ n\u00FAmero\ del\ dni\n
+comment2.params=
+comment2.target=char\ getLetra()
+comment2.text=\n\ Permite\ obtener\ el\ valor\ de\ la\ letra\ del\ dni\n\ \n\ @return\ La\ letra\ del\ dni\n
+comment3.params=numero\ letra
+comment3.target=void\ setDni(int,\ char)
+comment3.text=\n\ Permite\ asignar\ un\ dni\ v\u00E1lido.\ Para\ ello,\ la\ letra\ facilitada\ debe\ cumplir\ la\n\ regla\ de\ validaci\u00F3n\ de\ los\ dni\ espa\u00F1oles.\ Dicha\ norma\ obliga\ a\ que\ la\ letra\n\ coincida\ con\ la\ correspondiente\ a\ la\ posici\u00F3n\ que\ marca\ el\ resto\ de\ dividir\n\ el\ n\u00FAmero\ del\ dni\ entre\ 23\ dentro\ de\ este\ listado\ de\ letras...\n\ TRWAGMYFPDXBNJZSQVHLCKE.\n\ <br/>Si\ los\ valores\ facilitados\ no\ encajan,\ el\ dni\ no\ ser\u00E1\ asignado\ al\ objeto.\n\ <br/>\n\ <br/>Una\ vez\ asignado\ un\ dni\ v\u00E1lido,\ ya\ no\ se\ podr\u00E1\ cambiar.\n\ \n\ @param\ numero\ El\ n\u00FAmero\ del\ dni,\ sin\ incluir\ la\ letra.\n\ @param\ letra\ La\ letra\ del\ dni.\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\n\ \n\ @return\ El\ texto\ "inv\u00E1lido"\ en\ caso\ de\ que\ al\ dni\ no\ se\ le\ haya\ \n\ asignado\ a\u00FAn\ un\ dni\ v\u00E1lido.\ O\ bien,\ el\ dni\ seguido\ de\ su\ letra.\n\ \n
+numComments=5

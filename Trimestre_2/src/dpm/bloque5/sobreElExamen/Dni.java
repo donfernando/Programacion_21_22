@@ -1,4 +1,4 @@
-package ejercicio1;
+package dpm.bloque5.sobreElExamen;
 
 /**
  * La clase nos permitirá instanciar objetos tipo Dni
@@ -10,7 +10,16 @@ package ejercicio1;
 public class Dni {
 	private int numero;
 	private char letra = '*';
+	public final static String LETRAS_VALIDACION = "TRWAGMYFPDXBNJZSQVHLCKE";
 
+	
+	public static char letraDni(int num) {
+		int modulo;
+		modulo = num % 23;
+		return LETRAS_VALIDACION.charAt(modulo);
+	}
+	
+	
 	/**
 	 * Permite obtener el valor del número del dni (sin letra)
 	 * 
@@ -43,18 +52,26 @@ public class Dni {
 	 * @param letra La letra del dni.
 	 */
 	public void setDni(int numero, char letra) {
-		int modulo;
-		String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+		if (this.letra == '*' & letraDni(numero)==letra) {
+				this.numero = numero;
+				this.letra = letra;
+			}
+				
+	}
+		
+/*
+  		int modulo;
+
 		if (this.letra == '*') {
 			letra=Character.toUpperCase(letra);
 			modulo = numero % 23;
-			if (letra == letras.charAt(modulo)) {
+			if (letra == LETRAS_VALIDACION.charAt(modulo)) {
 				this.numero = numero;
-				this.letra = letra;
-				
+				this.letra = letra;				
 			}
 		}
 	}
+*/
 
 	/**
 	 * 

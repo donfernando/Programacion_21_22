@@ -1,15 +1,9 @@
 #BlueJ class context
 comment0.target=Ficha
-comment1.params=
-comment1.target=void\ mostrar()
-comment2.params=nuevoNombre
-comment2.target=void\ setNombre(java.lang.String)
+comment1.params=nombre\ edad
+comment1.target=Ficha(java.lang.String,\ int)
+comment2.params=club
+comment2.target=void\ actualizaNombreClub(java.lang.String)
 comment3.params=
-comment3.target=java.lang.String\ getNombre()
-comment4.params=
-comment4.target=int\ getEdad()
-comment5.params=nuevaEdad
-comment5.target=void\ setEdad(int)
-comment6.params=
-comment6.target=void\ cumpleAnio()
-numComments=7
+comment3.target=java.lang.String\ toString()
+numComments=4

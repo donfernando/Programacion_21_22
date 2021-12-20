@@ -26,7 +26,7 @@ public class AdivinaNumero {
 	public static void main(String[] args) {
 		FrioCaliente fc;
 		int intento;
-		int resultado;
+		int codigo;
 		System.out.print("Se elegirá al azar un número entre 1 y ...(elije tú): ");
 		fc = new FrioCaliente(entrada.nextInt());
 		System.out.println("Empieza el juego...");
@@ -34,8 +34,15 @@ public class AdivinaNumero {
 		do {
 			intento++;
 			System.out.print(intento + ".- ");
-			resultado = fc.adivinar(entrada.nextInt());
-			switch (resultado) {
+			codigo = fc.adivinar(entrada.nextInt());
+			if(codigo==9)
+				System.out.println("...número fuera del rango.");
+			else if(codigo==-1)
+				System.out.println("...te quedaste corto. Es mayor.");
+			else if(codigo==1)
+				System.out.println("...te pasate. Es menor.");
+			/*
+			switch (codigo) {
 			case 9:
 				System.out.println("...número fuera del rango.");
 				break;
@@ -46,8 +53,9 @@ public class AdivinaNumero {
 				System.out.println("...te pasate. Es menor.");
 				break;
 			}
-		} while (resultado != 0);
-		System.out.printf("Averiguado en %d intentos",intento);
+			*/
+		} while (codigo != 0);
+		System.out.printf("Averiguado en %d intentos.\n",intento);
 	}
 
 }

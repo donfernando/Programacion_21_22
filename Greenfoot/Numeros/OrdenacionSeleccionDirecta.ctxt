@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=OrdenacionSeleccionDirecta
+comment0.text=\n\ Ordenacion\ de\ datos.\n\ Algoritmo\ de\ Intercambio\ Directo\n\ \n\ @author\ Fernando\ Toboso\ \n\ @version\ 1.0\n
+comment1.params=miPanel\ x\ y
+comment1.target=OrdenacionSeleccionDirecta(Panel,\ int,\ int)
+comment2.params=miPanel\ x\ y\ fichas
+comment2.target=OrdenacionSeleccionDirecta(Panel,\ int,\ int,\ Ficha[])
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ Ficha\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment4.params=
+comment4.target=void\ intercambia()
+comment5.params=
+comment5.target=void\ animacionDelIntercambio()
+comment6.params=
+comment6.target=void\ ordenacionSeleccionDirecta()
+numComments=7

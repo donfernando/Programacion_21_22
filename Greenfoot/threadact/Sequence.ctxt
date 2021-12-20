@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Sequence
+comment0.text=\n\ A\ thread\ performing\ a\ sequence\ of\ actions.\n
+comment1.params=
+comment1.target=Sequence()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Sequence\n
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=void\ doRun()
+comment3.text=\n\ The\ sequence\ should\ be\ implemented\ in\ this\ method.\ Call\ waitForNextSequence()\ at\ any\n\ time\ to\ relinquish\ control\ and\ wait\ until\ the\ next\ sequence.\n
+comment4.params=
+comment4.target=void\ waitForNextSequence()
+comment4.text=\n\ Call\ this\ to\ relinquish\ control\ and\ wait\ for\ the\ next\ sequence.\n
+comment5.params=
+comment5.target=void\ performSequence()
+comment5.text=\n\ The\ controller\ calls\ this\ when\ a\ sequence\ should\ be\ executed.\ The\ sequence\ thread\n\ will\ be\ notified,\ and\ allowed\ to\ run\ until\ it\ relinquishes\ control,\ at\ which\ point\n\ this\ method\ will\ return.\n
+numComments=6

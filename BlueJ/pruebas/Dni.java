@@ -1,15 +1,7 @@
-package ejercicio1;
-
-/**
- * La clase nos permitirá instanciar objetos tipo Dni
- *         español básico. Los objetos recien instanciados no serán válidos
- *         hasta que se les asigne un dni válido usando la función
- *         <i>setDni(int... , char...)</i>
- * @author el Profernando
- */
 public class Dni {
 	private int numero;
 	private char letra = '*';
+	public final static String LETRAS_VALIDACION = "TRWAGMYFPDXBNJZSQVHLCKE";
 
 	/**
 	 * Permite obtener el valor del número del dni (sin letra)
@@ -44,11 +36,10 @@ public class Dni {
 	 */
 	public void setDni(int numero, char letra) {
 		int modulo;
-		String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
 		if (this.letra == '*') {
 			letra=Character.toUpperCase(letra);
 			modulo = numero % 23;
-			if (letra == letras.charAt(modulo)) {
+			if (letra == LETRAS_VALIDACION.charAt(modulo)) {
 				this.numero = numero;
 				this.letra = letra;
 				
@@ -71,3 +62,4 @@ public class Dni {
 		return text;
 	}
 }
+

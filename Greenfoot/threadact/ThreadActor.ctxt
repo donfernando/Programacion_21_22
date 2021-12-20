@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=ThreadActor
+comment0.text=\n\ A\ Greenfoot\ Actor\ allowing\ one\ or\ more\ "sequences"\ of\ actions\ to\ be\ implemented\ in\n\ separate\ threads\ (as\ instances\ of\ Sequence).\n\ \n\ <p>Typically,\ the\ Sequences\ would\ be\ inner\ classes\ so\ that\ they\ can\ call\ regular\ actor\n\ methods.\n\ \n\ <p>This\ probably\ leaks\ threads,\ seeing\ as\ there\ is\ no\ way\ to\ catch\ when\ the\ actor\ is\n\ removed\ from\ the\ world,\ or\ when\ the\ world\ itself\ is\ destroyed.\n\ \n\ @author\ Davin\ McCall\n
+comment1.params=
+comment1.target=ThreadActor()
+comment2.params=sequences
+comment2.target=void\ setSequences(Sequence[])
+comment2.text=\n\ Set\ the\ sequences\ that\ this\ actor\ will\ run.\ This\ should\ be\ called\ before\ the\n\ first\ act()\ (i.e.\ normally,\ from\ within\ the\ constructor).\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ -\ do\ whatever\ the\ ThreadActor\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+numComments=4

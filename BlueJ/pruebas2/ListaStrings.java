@@ -1,5 +1,3 @@
-package dpm.bloque5.recorridosTablas;
-
 public class ListaStrings {
 
 	public final static int TAMANIO_INICIAL = 10;
@@ -71,6 +69,8 @@ public class ListaStrings {
 	}
 
 	public String get(int pos) {
+		if(pos>=tamanio)
+			throw new ArrayIndexOutOfBoundsException();
 		return datos[pos];
 	}
 

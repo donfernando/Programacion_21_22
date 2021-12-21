@@ -1,4 +1,4 @@
-package dpm.bloque5.recorridosTablas;
+package dpm.bloque5.excepciones;
 
 public class ListaStrings {
 
@@ -46,6 +46,8 @@ public class ListaStrings {
 
 	public boolean add(int pos, String valorUsuario) {
 		int i;
+		if(pos>tamanio)
+			throw new ArrayIndexOutOfBoundsException();			
 		if (valorUsuario != null) {
 			asegurarEspacio();
 			for (i = tamanio - 1; i >= pos; i--) {
@@ -71,6 +73,8 @@ public class ListaStrings {
 	}
 
 	public String get(int pos) {
+		if(pos>=tamanio)
+			throw new ArrayIndexOutOfBoundsException();
 		return datos[pos];
 	}
 
@@ -96,10 +100,13 @@ public class ListaStrings {
 	public boolean isEmpty() {
 		return tamanio==0;
 	}
+	
+	// TODO	revisar excepción
 	public void set(int pos, String d) {
 		datos[pos]=d;
 	}
-	
+
+	// TODO revisar excepción
 	public String remove(int pos) {
         int i;
         String aux = datos[pos];
@@ -109,6 +116,8 @@ public class ListaStrings {
         tamanio --;
         return aux;
     }
+	
+	
 	public String[] toArray() {
 		String[] resultado = new String[tamanio];
 		for(int i=0;i<tamanio;i++)

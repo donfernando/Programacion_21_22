@@ -10,18 +10,24 @@ public class ExampleActor  extends ThreadActor
 {
     public ExampleActor()
     {
-        setSequences(new Sequence[] { new MoveSequence(), new TurnSequence() });
+        setSequences(new Sequence[] { new MoveSequence(1,0),new MoveSequence(1,-1), new TurnSequence() });
     }
 
     class MoveSequence extends Sequence
     {
+        int x, y;
+
+        public MoveSequence(int x, int y){
+            this.x=x;
+            this.y=y;
+        }    
         public void doRun() throws InterruptedException
         {
             // This corresponds roughly to a Scratch
             //   "when running, do forever: move(..)"
             
             while (true) {
-                setLocation(getX() + 1, getY());
+                setLocation(getX() + x, getY()+y);
                 waitForNextSequence();
             }
         }

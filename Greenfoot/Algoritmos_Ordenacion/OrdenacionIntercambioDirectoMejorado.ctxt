@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.target=OrdenacionSeleccionDirecta
+comment0.target=OrdenacionIntercambioDirectoMejorado
 comment0.text=\n\ Ordenacion\ de\ datos.\n\ Algoritmo\ de\ Intercambio\ Directo\n\ \n\ @author\ Fernando\ Toboso\ \n\ @version\ 1.0\n
-comment1.params=datos
-comment1.target=OrdenacionSeleccionDirecta(Casillero)
+comment1.params=c
+comment1.target=OrdenacionIntercambioDirectoMejorado(Casillero)
 comment2.params=
-comment2.target=void\ mueveCasillas()
+comment2.target=void\ act()
 comment2.text=\n\ Act\ -\ do\ whatever\ the\ Ficha\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 numComments=3

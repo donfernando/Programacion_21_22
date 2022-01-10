@@ -13,23 +13,27 @@ public class OrdenacionIntercambioDirecto extends Ordenacion
     private int posActual;
     private int tope;
 
-    public OrdenacionIntercambioDirecto(Casillero datos)
+    public OrdenacionIntercambioDirecto(Casillero c)
     {    
-        super(datos);
+        super(c);
         //preparando la ordenacion paso a paso...
-        tope=datos.tabla.length-1;
+        tope=c.tabla.length-1;
     }
+   
     
-
-    public void mueveCasillas() {
+    /**
+     * Act - do whatever the Ficha wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() {
        if(tope>0){
            if(posActual==tope){
                posActual=0;
-               datosParaOrdenar.tabla[tope].setPrefix("* ");
+               casillero.tabla[tope].setPrefix("* ");
                tope--;
            }
            else{
-               if(datosParaOrdenar.tabla[posActual].getValue()>datosParaOrdenar.tabla[posActual+1].getValue()) {
+               if(casillero.tabla[posActual].getValue()>casillero.tabla[posActual+1].getValue()) {
                   animacionDelIntercambio(posActual,posActual+1);
                   intercambia(posActual,posActual+1);
                }
@@ -39,11 +43,12 @@ public class OrdenacionIntercambioDirecto extends Ordenacion
            }
         }
         else {
-           datosParaOrdenar.tabla[tope].setPrefix("* ");
+           casillero.tabla[tope].setPrefix("* ");
            
         }
         
     }  
+
 
 /*    
     // Este seria el algoritmo imperativo ejecutado de la manera secuencial clasica.

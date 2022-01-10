@@ -24,6 +24,7 @@ public class ListaStrings {
 		for(int i=0;i<lista.length;i++) {
 			datos[i] = lista[i];
 		}
+//		datos = lista;
 		tamanio = lista.length;
 	}
 	public int size() {
@@ -90,11 +91,10 @@ public class ListaStrings {
 	}
 	
 	public void clear() {
-		/*
-		int i;
-		for (i = 0; i < tamanio - 1; i++)
-			datos[i]=null;
-		*/
+		
+//		int i;
+//		for (i = 0; i < tamanio - 1; i++)
+//			datos[i]=null;
 		tamanio=0;
 	}
 	public boolean isEmpty() {
@@ -103,17 +103,23 @@ public class ListaStrings {
 	
 	// TODO	revisar excepción
 	public void set(int pos, String d) {
-		datos[pos]=d;
+		if(pos>=tamanio)
+			throw new ArrayIndexOutOfBoundsException();
+		if (d != null) 
+			datos[pos]=d;
 	}
 
 	// TODO revisar excepción
 	public String remove(int pos) {
         int i;
+		if(pos>=tamanio)
+			throw new ArrayIndexOutOfBoundsException();
         String aux = datos[pos];
         for (i = pos; i < tamanio -1; i++) {
             datos[i] = datos[i + 1];
         }
-        tamanio --;
+        //datos[i]=null;
+        tamanio--;
         return aux;
     }
 	

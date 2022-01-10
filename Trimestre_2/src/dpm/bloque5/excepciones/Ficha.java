@@ -1,4 +1,4 @@
-package dpm.bloque5.estaticos;
+package dpm.bloque5.excepciones;
 
 public class Ficha {
 	private String nombre;
@@ -6,6 +6,8 @@ public class Ficha {
 	private static String club = "desconocido";
 
 	public Ficha(String nombre, int edad) {
+		if(nombre == null || edad<0 || edad > 125)
+			throw new RuntimeException();
 		this.nombre = nombre;
 		this.edad = edad;
 	}

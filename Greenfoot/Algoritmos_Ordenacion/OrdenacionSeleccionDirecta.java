@@ -14,19 +14,20 @@ public class OrdenacionSeleccionDirecta extends Ordenacion
     private int posCasillaSelec;
     private int posMinimo;
 
-    public OrdenacionSeleccionDirecta(Casillero datos)
+    public OrdenacionSeleccionDirecta(Casillero c)
     {    
-        super(datos);
+        super(c);
         //preparando la ordenacion paso a paso...
     }
+    
     
     /**
      * Act - do whatever the Ficha wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void mueveCasillas() { 
-       if(posCasillaSelec<datosParaOrdenar.tabla.length-1){
-           if(posActual==datosParaOrdenar.tabla.length){
+    public void act() {
+       if(posCasillaSelec<casillero.tabla.length-1){
+           if(posActual==casillero.tabla.length){
                animacionDelIntercambio(posMinimo,posCasillaSelec);
                intercambia(posMinimo,posCasillaSelec);
                posCasillaSelec++;
@@ -36,17 +37,17 @@ public class OrdenacionSeleccionDirecta extends Ordenacion
            else{
                destaca(posActual);
                if(posActual==posCasillaSelec)
-                   datosParaOrdenar.tabla[posMinimo].setPrefix("* ");
-               else if(datosParaOrdenar.tabla[posActual].getValue()<datosParaOrdenar.tabla[posMinimo].getValue()) {
-                   datosParaOrdenar.tabla[posMinimo].setPrefix("");
+                   casillero.tabla[posMinimo].setPrefix("* ");
+               else if(casillero.tabla[posActual].getValue()<casillero.tabla[posMinimo].getValue()) {
+                   casillero.tabla[posMinimo].setPrefix("");
                    posMinimo=posActual;
-                   datosParaOrdenar.tabla[posMinimo].setPrefix("* ");
+                   casillero.tabla[posMinimo].setPrefix("* ");
                }
                posActual++;
            }
         }
         else
-           datosParaOrdenar.tabla[posCasillaSelec].setPrefix("* ");
+           casillero.tabla[posCasillaSelec].setPrefix("* ");
         
     }  
 

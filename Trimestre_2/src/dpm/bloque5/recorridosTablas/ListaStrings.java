@@ -86,11 +86,9 @@ public class ListaStrings {
 	}
 	
 	public void clear() {
-		/*
 		int i;
 		for (i = 0; i < tamanio - 1; i++)
 			datos[i]=null;
-		*/
 		tamanio=0;
 	}
 	public boolean isEmpty() {
@@ -106,7 +104,7 @@ public class ListaStrings {
         for (i = pos; i < tamanio -1; i++) {
             datos[i] = datos[i + 1];
         }
-        tamanio --;
+        tamanio--;
         return aux;
     }
 	public String[] toArray() {

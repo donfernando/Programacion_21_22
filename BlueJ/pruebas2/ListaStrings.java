@@ -44,6 +44,9 @@ public class ListaStrings {
 
     public boolean add(int pos, String valorUsuario) {
         int i;
+	if(pos>tamanio)
+            throw new ArrayIndexOutOfBoundsException();			
+
         if (valorUsuario != null) {
             asegurarEspacio();
             for (i = tamanio - 1; i >= pos; i--) {

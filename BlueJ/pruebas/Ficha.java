@@ -5,8 +5,8 @@ public class Ficha {
     private static String club = "desconocido";
 
     public Ficha(String nombre, int edad) {
-	if(nombre == null || edad<0 || edad > 125)
-            throw new RuntimeException();
+    if(nombre == null || edad<0 || edad > 125)
+            throw new RuntimeException("No es valida una ficha con esto valores");
         this.nombre = nombre;
         this.edad = edad;
     }

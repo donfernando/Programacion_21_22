@@ -49,14 +49,14 @@ public class Colores {
 		initialize();
 
 		// TODO Nuestro Potenciometro
-//		float[] valores1 = {0,40,80,120,160,200,255};
-//		float[] valores2 = {0,90,180,255};
-		float[] valores3 = {0,20,40,60,80,90,100,110,120,
-							130,140,150,160,170,180,190,200,
-							210,220,230,240,255};
-		rojo=new Potenciometro(valores3);
-		verde=new Potenciometro(valores3);
-		azul=new Potenciometro(valores3);
+//		float[] valores = {0,40,80,120,160,200,255};
+		float[] valores = {0,90,180,255};
+//		float[] valores = {0,20,40,60,80,90,100,110,120,
+//							130,140,150,160,170,180,190,200,
+//							210,220,230,240,255};
+		rojo=new Potenciometro(valores);
+		verde=new Potenciometro(valores);
+		azul=new Potenciometro(valores);
 		actualizarPaneles();
 	}
 

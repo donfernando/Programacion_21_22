@@ -45,7 +45,6 @@ public class Potenciometro {
 		if (posicionSeleccionada > 0) {
 			posicionSeleccionada--;
 		}
-
 	}
 
 	public void apagar() {

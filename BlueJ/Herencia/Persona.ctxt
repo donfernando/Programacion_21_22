@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=_sexo\ _numeroPatas\ _edad\ _peso\ _especie\ _colorPelo\ _tieneDientes\ _estaCasado
+comment0.target=Persona(String,\ int,\ short,\ int,\ String,\ String,\ boolean,\ boolean)
+numComments=1

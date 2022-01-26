@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=_sexo\ _numeroPatas\ _edad\ _peso\ _especie\ _numeroDeAlas
+comment0.target=Insecto(String,\ int,\ short,\ int,\ String,\ byte)
+numComments=1

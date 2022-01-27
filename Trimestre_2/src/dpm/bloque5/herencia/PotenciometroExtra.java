@@ -3,8 +3,10 @@ package dpm.bloque5.herencia;
 public class PotenciometroExtra extends Potenciometro {
 
 	public PotenciometroExtra() {
-		super(new float[] {0,5,10,15,20,25});
-		System.out.println("Constructor PotenciometroExtra");
+		super(valoresPotAleatorios());
+//		super(new float[] {0,5,10,15,20,25});
+		
+		System.out.println("Constructor PotenciometroExtra()");
 	}
 	public PotenciometroExtra(float[] potencias) {
 		super(potencias);

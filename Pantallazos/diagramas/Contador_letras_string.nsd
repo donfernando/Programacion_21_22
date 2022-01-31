@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.29-13" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="javier" created="2019-10-23" changedby="profesor" changed="2019-10-24" origin="Structorizer 3.30-01" text="&#34;Contador letras string&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;var linea:String&#34;,&#34;var numLinea:int&#34;,&#34;var lineaActual:int&#34;,&#34;var x:int&#34;,&#34;var texto:String[] &#60;- new String[10]&#34;,&#34;var letra:String&#34;,&#34;var letraActual:char&#34;,&#34;var longitud:int&#34;,&#34;var frase:String&#34;,&#34;var letraEncontradas:int&#34;,&#34;var media:double&#34;,&#34;var numCaracteres:int &#60;- 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;numLinea&#60;-0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;longitud&#60;-0&#34;,&#34;letraEncontradas&#60;-0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;OUTPUT &#34;&#34;Introduce un linea&#34;&#34;&#34;,&#34;INPUT linea&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<while text="&#34;linea!=&#34;&#34;fin&#34;&#34;&#34;" comment="" color="ffffff" disabled="0">
+			<qWhile>
+				<instruction text="&#34;texto[numLinea]&#60;- linea&#34;,&#34;numLinea++&#34;,&#34;OUTPUT &#34;&#34;Introduce un linea&#34;&#34;&#34;,&#34;INPUT linea&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qWhile>
+		</while>
+		<alternative text="&#34;numLinea != 0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;OUTPUT &#34;&#34;Introduzca una letra a escanear&#34;&#34;&#34;,&#34;INPUT letra&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;lineaActual&#60;-0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<while text="&#34;lineaActual&#60;numLinea&#34;" comment="" color="ffffff" disabled="0">
+					<qWhile>
+						<instruction text="&#34;frase&#60;-texto[lineaActual]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<for text="&#34;for x &#60;- 0 to longFraseActual&#34;" comment="" counterVar="x" startValue="0" endValue="longFraseActual" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+							<qFor>
+								<instruction text="&#34;letraActual &#60;- frase[x]&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+								<alternative text="&#34;letra=letraActual&#34;" comment="" color="ffffff" disabled="0">
+									<qTrue>
+										<instruction text="&#34;letraEncontradas++&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qTrue>
+									<qFalse color="ffffff">
+									</qFalse>
+								</alternative>
+								<instruction text="&#34;numCaracteres &#60;- numCaracteres +1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFor>
+						</for>
+						<instruction text="&#34;lineaActual++&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qWhile>
+				</while>
+				<instruction text="&#34;OUTPUT &#34;&#34;La letra &#34;&#34;+letra+&#34;&#34; aparece &#34;&#34;+ letraEncontradas+&#34;&#34; veces.&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;media &#60;- numCaracteres / numLinea&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+				<instruction text="&#34;OUTPUT &#34;&#34;La media es &#34;&#34;+media&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+	</children>
+</root>

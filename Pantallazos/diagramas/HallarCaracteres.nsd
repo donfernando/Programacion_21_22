@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.29-13" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="adrian" created="2019-10-31" changedby="profesor" changed="2019-10-31" origin="Structorizer 3.29-13" text="&#34;HallarCaracteres&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;var frase : String&#34;,&#34;var palabra: String&#34;,&#34;var i: int&#34;,&#34;var encontrado: bool &#60;- false&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;OUTPUT &#34;&#34; Introduzca una frase cualquiera&#34;&#34;&#34;,&#34;INPUT frase&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;OUTPUT &#34;&#34;Introduzca 3 letras seguidas: &#34;&#34;&#34;,&#34;INPUT palabra&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;i &#60;- 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<while text="&#34;i &#60; frase.lenght-3 &amp;&amp;&#34;,&#34;! (palabra.charAt(0) = frase.charAt(i) &amp;&amp;&#34;,&#34;palabra.charAt(1) = frase.charAt(i+1) &amp;&amp;&#34;,&#34; palabra.charAt(2) = frase.charAt(i+2))&#34;" comment="&#34;&#34;" color="80ffff" disabled="0">
+			<qWhile>
+				<instruction text="&#34;i &#60;- i + 1&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qWhile>
+		</while>
+		<alternative text="&#34;palabra.charAt(0) = frase.charAt(i) &amp;&amp;&#34;,&#34;palabra.charAt(1) = frase.charAt(i+1) &amp;&amp;&#34;,&#34; palabra.charAt(2) = frase.charAt(i+2)&#34;" comment="&#34;&#34;" color="80ff80" disabled="0">
+			<qTrue>
+				<instruction text="&#34;OUTPUT &#34;&#34;Se ha encontrado las 3 letras. Estan en la posición &#34;&#34; +i&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<instruction text="&#34;OUTPUT &#34;&#34;No se han encontrado&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFalse>
+		</alternative>
+	</children>
+</root>

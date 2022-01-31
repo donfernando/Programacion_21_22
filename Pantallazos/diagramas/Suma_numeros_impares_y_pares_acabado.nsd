@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.29-13" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="Alumno" created="2019-10-23" changedby="profesor" changed="2019-10-23" origin="Structorizer 3.30-01" text="&#34;Suma numeros impares y pares&#34;" comment="" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;var numero:int&#34;,&#34;var i:int&#34;,&#34;var cuentapar:int &#60;- 0&#34;,&#34;var cuentaimpar:int &#60;- 0&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;OUTPUT &#34;&#34;Introduce 10 numeros&#34;&#34;&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<for text="&#34;for i &#60;- 0 to 9&#34;" comment="" counterVar="i" startValue="0" endValue="9" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+			<qFor>
+				<instruction text="&#34;INPUT numero&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+				<alternative text="&#34;numero%2=0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;cuentapar&#60;-numero+cuentapar&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<instruction text="&#34;cuentaimpar&#60;-numero+cuentaimpar&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qFor>
+		</for>
+		<instruction text="&#34;OUTPUT &#34;&#34;La suma de los numeros pares es &#34;&#34;+ cuentapar&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;OUTPUT &#34;&#34;La suma de los numeros impares es &#34;&#34;+ cuentaimpar&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>

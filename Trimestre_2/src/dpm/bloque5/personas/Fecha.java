@@ -178,4 +178,9 @@ public class Fecha {
 		s = this.dia + " de " + nombreMeses[this.mes - 1] + " de " + this.anio;
 		return s;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		Fecha f = (Fecha)obj;
+		return dia==f.dia & mes==f.mes & anio==f.anio ;
+	}
 }

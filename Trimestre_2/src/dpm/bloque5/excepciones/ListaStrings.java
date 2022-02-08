@@ -122,8 +122,7 @@ public class ListaStrings {
         tamanio--;
         return aux;
     }
-	
-	
+
 	public String[] toArray() {
 		String[] resultado = new String[tamanio];
 		for(int i=0;i<tamanio;i++)

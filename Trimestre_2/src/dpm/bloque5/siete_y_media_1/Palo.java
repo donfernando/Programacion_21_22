@@ -1,4 +1,4 @@
-package dpm.bloque5.siete_y_media_2;
+package dpm.bloque5.siete_y_media_1;
 
 public class Palo {
 	public final static Palo PICA=new Palo();

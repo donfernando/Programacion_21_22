@@ -32,16 +32,16 @@ public class SieteyMedia {
 		double puntosJ = jugador.cuentaPuntos();
 		double puntosB = banca.cuentaPuntos();
 
-		if (puntosJ <= 7.5 && (puntosB > 7.5 || puntosJ > puntosB)) {
-
-			System.out.println("Gana el jugador con " + jugador + " (" + puntosJ + " puntos) frente a " + banca + " ("
-					+ puntosB + " puntos) de la banca");
-		} else if (puntosB <= 7.5) {
-			System.out.println("Gana la banca con " + banca + " (" + puntosB + " puntos) frente a " + jugador + " ("
-					+ puntosJ + " puntos) del jugador");
+		if (puntosJ <= 7.5 && (puntosB > 7.5 || puntosJ > puntosB))
+			System.out.println("El ganador es el jugador con: " + puntosJ + " frente a los de la banca: " + puntosB);
+		else if (puntosB <= 7.5 && (puntosJ > 7.5 || puntosB > puntosJ)) {
+			System.out.println("El ganador es la banca con: " + puntosB + " frente a los dejugador: " + puntosJ);
+		} else if (puntosB > 7.5 & puntosJ > 7.5) {
+			System.out.println("No hay ganador, puntos jugador: " + puntosJ + " puntos banca: " + puntosB);
 		} else {
-			System.out.println("No hay ganador: Jugador " + jugador + " (" + puntosJ + " puntos) y banca " + banca
-					+ " (" + puntosB + " puntos) se han pasado");
+			System.out.println("Empate, puntos jugador: " + puntosJ + " puntos banca: " + puntosB);
 		}
+
+		System.out.println("\nJugador: "+jugador + "\nBanca:" + banca);
 	}
 }

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Rectangulo
+comment1.params=a\ b\ c\ d
+comment1.target=Rectangulo(int,\ int,\ int,\ int)
+comment2.params=
+comment2.target=float\ area()
+comment3.params=
+comment3.target=float\ perimetro()
+comment4.params=
+comment4.target=int\ alto()
+comment5.params=
+comment5.target=int\ ancho()
+comment6.params=g
+comment6.target=void\ dibujar(java.awt.Graphics)
+numComments=7

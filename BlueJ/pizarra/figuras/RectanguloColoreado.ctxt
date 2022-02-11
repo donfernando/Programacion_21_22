@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=RectanguloColoreado
+comment1.params=a\ b\ l1\ l2\ c
+comment1.target=RectanguloColoreado(int,\ int,\ int,\ int,\ java.awt.Color)
+comment2.params=g
+comment2.target=void\ dibujar(java.awt.Graphics)
+numComments=3

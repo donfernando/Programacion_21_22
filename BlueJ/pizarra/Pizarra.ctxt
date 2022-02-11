@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Pizarra
+comment1.params=arg
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=Pizarra()
+comment3.params=e
+comment3.target=void\ windowClosing(java.awt.event.WindowEvent)
+comment4.params=e
+comment4.target=void\ keyPressed(java.awt.event.KeyEvent)
+comment5.params=g
+comment5.target=void\ paint(java.awt.Graphics)
+numComments=6

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=AroOlimpico
+comment1.params=a\ b\ d\ c
+comment1.target=AroOlimpico(int,\ int,\ int,\ java.awt.Color)
+comment2.params=g
+comment2.target=void\ dibujar(java.awt.Graphics)
+numComments=3

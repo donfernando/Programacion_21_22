@@ -4,7 +4,9 @@ public class TableroCuadrado<T> extends Tablero<T> {
 	public TableroCuadrado(int tam) {
 		super(tam,tam);
 	}
+
+	// TODO
+//	int elementosEnDiagonal()
+//	int elementosEnDiagonalSecundaria()
 	
-	int elementosEnDiagonal()
-	int elementosEnDiagonalSecundaria()
 }

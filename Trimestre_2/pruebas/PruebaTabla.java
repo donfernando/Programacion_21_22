@@ -4,7 +4,8 @@ public class PruebaTabla {
 
 	public static void main(String[] args) {
 		Tablero<Number> t;
-		t = new TableroCuadrado<Number>(3);
+		t = new Tablero<Number>(5,3);
+//		t = new TableroCuadrado<Number>(3);
 		
 		System.out.println(t);
 		t.set(1, 2, 34);

@@ -37,4 +37,33 @@ public class Tablero<T> {
 		}
 		return s;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		int f,c;
+		if(this==obj)
+			return true;
+		// else
+//		if(obj.getClass().getName().equals("Tablero")) {
+		if(obj instanceof Tablero) {
+			Tablero elOtro = (Tablero)obj;
+			if(this.datos.length==elOtro.datos.length &&
+				this.datos[0].length==elOtro.datos[0].length	) {
+				for (f = 0; f < datos.length; f++) {
+					for (c = 0; c < datos[f].length; c++) {
+						if(datos[f][c]==null && elOtro.datos[f][c]!=null ||
+								!datos[f][c].equals(elOtro.datos[f][c]))
+							return false;
+					}
+				}
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	// TODO boolean disponible(int f, int c)
+
+	
 }

@@ -51,9 +51,13 @@ public class Tablero<T> {
 				this.datos[0].length==elOtro.datos[0].length	) {
 				for (f = 0; f < datos.length; f++) {
 					for (c = 0; c < datos[f].length; c++) {
-						if(datos[f][c]==null && elOtro.datos[f][c]!=null ||
-								!datos[f][c].equals(elOtro.datos[f][c]))
-							return false;
+						if(datos[f][c]==null) {
+							if(elOtro.datos[f][c]!=null)
+								return false;
+						
+						} else 
+							if(!datos[f][c].equals(elOtro.datos[f][c]))
+								return false;
 					}
 				}
 				return true;

@@ -9,7 +9,7 @@ public class HojaCalculoMain {
 //		hojacalculo.rellenarAleatorio();
 		HojaCalculo hojacalculo = new HojaCalculo(4, 6);
 		hojacalculo.set(1, 1, 10.0);
-		hojacalculo.set(1, 2, 20.0);
+		hojacalculo.set(1, 2, 20.0/3);
 		hojacalculo.set(2, 1, 50.0);
 		System.out.println(hojacalculo);
 

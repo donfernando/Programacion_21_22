@@ -23,13 +23,13 @@ public class HojaCalculo extends Tablero<Double> {
 	public Double[] subTotalColumnas() {
 		double suma;
 		Double[] resultado = new Double[numColumnas()];
-		for (int j = 0; j < numColumnas(); j++) {
+		for (int c = 0; c < numColumnas(); c++) {
 			suma = 0;
-			for (int i = 0; i < numFilas(); i++) {
-				if (get(i, j) != null)
-					suma += get(i, j);
+			for (int f = 0; f < numFilas(); f++) {
+				if (get(f, c) != null)
+					suma += get(f, c);
 			}
-			resultado[j] = suma;
+			resultado[c] = suma;
 		}
 		return resultado;
 	}
@@ -37,13 +37,13 @@ public class HojaCalculo extends Tablero<Double> {
 	public Double[] subTotalFilas() {
 		double suma;
 		Double[] resultado = new Double[numFilas()];
-		for (int i = 0; i < numFilas(); i++) {
+		for (int f = 0; f < numFilas(); f++) {
 			suma = 0;
-			for (int j = 0; j < numColumnas(); j++) {
-				if (get(i, j) != null)
-					suma += get(i, j);
+			for (int c = 0; c < numColumnas(); c++) {
+				if (get(f, c) != null)
+					suma += get(f, c);
 			}
-			resultado[i] = suma;
+			resultado[f] = suma;
 		}
 		return resultado;
 	}
@@ -51,14 +51,9 @@ public class HojaCalculo extends Tablero<Double> {
 	public Double total() {
 		Double resultado = 0.0;
 		Double[] totalFilas = subTotalFilas();
-//		Double[] totalColumnas = subTotalColumnas();
 
 		for (int i = 0; i < totalFilas.length; i++)
 			resultado += totalFilas[i];
-
-		
-//		for (int i = 0; i < totalColumnas.length; i++)
-//			resultado += totalColumnas[i];
 
 		return resultado;
 	}
@@ -81,9 +76,9 @@ public class HojaCalculo extends Tablero<Double> {
 	private String formatea(Double dato) {
 		String s;
 		if(dato!=null)
-			s=String.format("%"+anchoCol+"." + decimales + "f%s", dato, " | ");
+			s=String.format("%"+anchoCol+"." + decimales + "f | ", dato);
 		else
-			s=String.format("%"+anchoCol+"f%s", dato, " | ");
+			s=String.format("%"+anchoCol+"f | ", dato);
 		return s;
 	}
 }

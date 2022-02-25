@@ -9,6 +9,7 @@ public class Mundo {
 	
 	public Mundo() {
 
+		Direccion x = Direccion.HORIZONTAL;
 		
 	}
 	

@@ -1,5 +1,7 @@
 package juego;
 
+import java.awt.Point;
+
 import juego.base.Humano;
 import juego.base.Jugador;
 import juego.base.Mundo.Estado;
@@ -9,8 +11,12 @@ public class HundirLaFlota {
 		Estado e;		
 		Humano jJhonny = new Humano("Juanito");
 		Jugador jComputer = new Jugador("HAL");
-
+		Point p;
+		
 		jJhonny.colocarBarcosAutomatico();
+		//Consola.consola().colocarBarcosInteracivo(jJhonny.getMundo());
+		
+		
 		
 		Consola.consola().mensaje("Tablero de "+jJhonny.getNombre());
 		Consola.consola().desvelarMundo(jJhonny.getMundo());
@@ -19,18 +25,15 @@ public class HundirLaFlota {
 		do {
 			Consola.consola().mensaje("Tablero de "+jComputer.getNombre());
 			Consola.consola().desvelarMundo(jComputer.getMundo());
-//			p = Consola.consola().leerCoordenadas("Posicion de disparo: ");
-//			e=jJhonny.disparar(jComputer.getMundo(),p);
-			e=jJhonny.disparar(jComputer.getMundo());
-			Consola.consola().mensaje(jJhonny.getNombre() + " ha hecho... " + e.toString());
+			p = Consola.consola().leerCoordenadas("Posicion de disparo: ");
+			e=jJhonny.disparar(jComputer.getMundo(),p);
+//			e=jJhonny.disparar(jComputer.getMundo());
+			Consola.consola().mensaje(jJhonny.getNombre() + " ha hecho... " + e);
 		} while (!e.equals(Estado.AGUA) && jComputer.getMundo().quedanBarcos());
 
 		Consola.consola().mensaje("Tablero de "+jComputer.getNombre());
 		Consola.consola().desvelarMundo(jComputer.getMundo());
 		
-		
-		
-		
-		
+
 	}
 }

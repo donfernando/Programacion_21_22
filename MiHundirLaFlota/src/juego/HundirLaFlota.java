@@ -5,35 +5,45 @@ import java.awt.Point;
 import juego.base.Humano;
 import juego.base.Jugador;
 import juego.base.Mundo.Estado;
+import juego.flota.AbsAstillero;
+import juego.flota.Astillero;
+import juego.flota.Barco;
+import juego.flota.Submarino;
+import juego.flota.Yate;
+import miJuego.MiAstillero;
 
 public class HundirLaFlota {
+	
+	
 	public static void main(String[] args) {
 		Estado e;		
-		Humano jJhonny = new Humano("Juanito");
-		Jugador jComputer = new Jugador("HAL");
+		Jugador jug_01 = new Humano("BLASA");
+		Jugador jug_02 = new Jugador("HAL");
 		Point p;
 		
-		jJhonny.colocarBarcosAutomatico();
-		//Consola.consola().colocarBarcosInteracivo(jJhonny.getMundo());
+		jug_01.colocarBarcosAutomatico(Astillero.getNuevaFlota(new MiAstillero()));
+//		Consola.consola().colocarBarcosInteracivo(jJhonny.getMundo(),
+//											MiAstillero.getNuevaFlota(new MiAstillero()));
 		
-		
-		
-		Consola.consola().mensaje("Tablero de "+jJhonny.getNombre());
-		Consola.consola().desvelarMundo(jJhonny.getMundo());
+		jug_02.colocarBarcosAutomatico(Astillero.getNuevaFlota(new MiAstillero()));
+		Consola.consola().mensaje("Tablero de "+jug_01.getNombre());
+		Consola.consola().desvelarMundo(jug_01.getMundo());
+		Consola.consola().mensaje("Tablero de "+jug_02.getNombre());
+		Consola.consola().desvelarMundo(jug_02.getMundo());
 
-		jComputer.colocarBarcosAutomatico();		
 		do {
-			Consola.consola().mensaje("Tablero de "+jComputer.getNombre());
-			Consola.consola().desvelarMundo(jComputer.getMundo());
-			p = Consola.consola().leerCoordenadas("Posicion de disparo: ");
-			e=jJhonny.disparar(jComputer.getMundo(),p);
-//			e=jJhonny.disparar(jComputer.getMundo());
-			Consola.consola().mensaje(jJhonny.getNombre() + " ha hecho... " + e);
-		} while (!e.equals(Estado.AGUA) && jComputer.getMundo().quedanBarcos());
-
-		Consola.consola().mensaje("Tablero de "+jComputer.getNombre());
-		Consola.consola().desvelarMundo(jComputer.getMundo());
-		
-
+			do {
+				e=jug_01.disparar(jug_02.getMundo());
+			} while(e.equals(Estado.YADISPARADO));
+			Consola.consola().mensaje(jug_01.getNombre() + " ha hecho... " + e);
+			do {
+			e=jug_02.disparar(jug_01.getMundo());
+			} while(e.equals(Estado.YADISPARADO));
+			Consola.consola().mensaje(jug_02.getNombre() + " ha hecho... " + e);
+			Consola.consola().mensaje("Tablero de "+jug_01.getNombre());
+			Consola.consola().desvelarMundo(jug_01.getMundo());
+			Consola.consola().mensaje("Tablero de "+jug_02.getNombre());
+			Consola.consola().desvelarMundo(jug_02.getMundo());
+		} while (jug_01.getMundo().quedanBarcos() && jug_02.getMundo().quedanBarcos());
 	}
 }

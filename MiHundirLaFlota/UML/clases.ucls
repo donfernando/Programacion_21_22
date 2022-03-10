@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="juego.Consola" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/Consola.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="171" y="536"/>    
+    <position height="-1" width="-1" x="176" y="368"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <enumeration id="2" language="java" name="juego.base.Mundo.Estado" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/base/Mundo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="406" y="444"/>    
+    <position height="-1" width="-1" x="872" y="477"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </enumeration>  
   <class id="3" language="java" name="juego.base.Jugador" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/base/Jugador.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="187" y="133"/>    
+    <position height="-1" width="-1" x="508" y="148"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="juego.base.Mundo" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/base/Mundo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="508" y="176"/>    
+    <position height="-1" width="-1" x="861" y="209"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <enumeration id="5" language="java" name="juego.base.Mundo.Direccion" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/base/Mundo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="761" y="87"/>    
+    <position height="-1" width="-1" x="1134" y="120"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </enumeration>  
   <class id="6" language="java" name="juego.HundirLaFlota" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/HundirLaFlota.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="353" y="626"/>    
+    <position height="-1" width="-1" x="144" y="585"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="juego.flota.Transatlantico" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/flota/Transatlantico.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="606" y="560"/>    
+    <position height="-1" width="-1" x="1274" y="484"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="juego.flota.Yate" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/flota/Yate.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="868" y="507"/>    
+    <position height="-1" width="-1" x="1536" y="431"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="juego.flota.Barco" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/flota/Barco.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="812" y="311"/>    
+    <position height="-1" width="-1" x="1480" y="235"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="juego.flota.Submarino" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/flota/Submarino.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="734" y="559"/>    
+    <position height="-1" width="-1" x="1402" y="483"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="juego.flota.Acorazado" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/flota/Acorazado.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="579" y="425"/>    
+    <position height="-1" width="-1" x="1247" y="349"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,65 +102,113 @@
   </class>  
   <class id="12" language="java" name="juego.base.Humano" project="MiHundirLaFlota" 
     file="/MiHundirLaFlota/src/juego/base/Humano.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="187" y="318"/>    
+    <position height="-1" width="-1" x="540" y="351"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="13">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="14">    
-    <end type="SOURCE" refId="8"/>    
+  <class id="13" language="java" name="juego.flota.Astillero" project="MiHundirLaFlota" 
+    file="/MiHundirLaFlota/src/juego/flota/Astillero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="686" y="753"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="juego.flota.AbsAstillero" project="MiHundirLaFlota" 
+    file="/MiHundirLaFlota/src/juego/flota/AbsAstillero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="679" y="585"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="miJuego.Crucero" project="MiHundirLaFlota" 
+    file="/MiHundirLaFlota/src/miJuego/Crucero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1294" y="741"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="miJuego.MiAstillero" project="MiHundirLaFlota" 
+    file="/MiHundirLaFlota/src/miJuego/MiAstillero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1114" y="747"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="9"/>  
   </generalization>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="11"/>    
+  <generalization id="18">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="13"/>  
+  </generalization>  
+  <generalization id="19">    
+    <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="9"/>  
   </generalization>  
-  <association id="16">    
+  <association id="20">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="17" name="miMundo">        
-        <position height="18" width="62" x="301" y="112"/>      
+      <attribute id="21" name="miMundo">        
+        <position height="18" width="62" x="629" y="151"/>      
       </attribute>      
-      <multiplicity id="18" minimum="0" maximum="1">        
-        <position height="0" width="0" x="338" y="-226"/>      
+      <multiplicity id="22" minimum="0" maximum="1">        
+        <position height="0" width="0" x="85" y="-194"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="7"/>    
+  <generalization id="23">    
+    <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="9"/>  
   </generalization>  
-  <generalization id="20">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <nesting id="21">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="5"/>  
-  </nesting>  
-  <nesting id="22">    
+  <nesting id="24">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="2"/>  
   </nesting>  
-  <association id="23">    
+  <generalization id="25">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <nesting id="27">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </nesting>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="29">    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="24" name="tablero">        
-        <position height="0" width="0" x="219" y="-90"/>      
+      <attribute id="30" name="tablero">        
+        <position height="0" width="0" x="281" y="-167"/>      
       </attribute>      
-      <multiplicity id="25" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="219" y="-90"/>      
+      <multiplicity id="31" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="281" y="-167"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

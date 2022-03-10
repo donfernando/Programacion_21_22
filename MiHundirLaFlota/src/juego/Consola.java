@@ -5,8 +5,10 @@ import java.util.Scanner;
 
 import juego.base.Mundo;
 import juego.base.Mundo.Direccion;
+import juego.flota.Astillero;
 import juego.flota.Barco;
 import juego.flota.Yate;
+import miJuego.MiAstillero;
 
 public class Consola {
 	private Scanner in = new Scanner(System.in);
@@ -106,12 +108,10 @@ public class Consola {
 		
 	}
 	
-	public void colocarBarcosInteracivo(Mundo m) {
+	public void colocarBarcosInteracivo(Mundo m,Barco[] listaBarcos) {
 		Point p;
 		Direccion direc=null;
 		boolean esYate;
-		Barco[] listaBarcos = Barco.getNuevaFlota();
-		
 		
 		for (int i = 0; i < listaBarcos.length; i++) {
 			esYate = listaBarcos[i] instanceof Yate;

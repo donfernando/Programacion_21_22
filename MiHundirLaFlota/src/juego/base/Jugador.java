@@ -1,8 +1,11 @@
 package juego.base;
 
+import juego.HundirLaFlota;
 import juego.base.Mundo.Direccion;
 import juego.base.Mundo.Estado;
+import juego.flota.Astillero;
 import juego.flota.Barco;
+import miJuego.MiAstillero;
 
 public class Jugador {
 	protected Mundo miMundo;
@@ -20,10 +23,9 @@ public class Jugador {
 		return miMundo;
 	}
 
-	public void colocarBarcosAutomatico() {
+	public void colocarBarcosAutomatico(Barco[] listaBarcos) {
 		int f, c, d;
 		Direccion direc;
-		Barco[] listaBarcos = Barco.getNuevaFlota();
 		for (int i = 0; i < listaBarcos.length; i++) {
 			do {
 				f = (int) (Math.random() * miMundo.getFilas());

@@ -9,13 +9,9 @@ public abstract class Barco {
 	public Barco(int tam) {
 		tamanio=tam;
 	}
-
-	public static Barco[] getNuevaFlota() {
-		Barco[] listaBarcos = { new Acorazado(), new Transatlantico(), new Transatlantico(), new Submarino(),
-				new Submarino(), new Submarino(), new Yate(), new Yate(), new Yate(), new Yate() };
-		return listaBarcos;
-	}
 	
+		
+
 	public Estado tocado() {
 		if(toques<tamanio) {
 			toques++;

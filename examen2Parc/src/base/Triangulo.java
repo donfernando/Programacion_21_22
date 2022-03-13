@@ -1,15 +1,15 @@
 package base;
 
 public class Triangulo implements Comparable<Triangulo>{
-	private int a,b,c;
-	public Triangulo(int a, int b, int c) {
+	private double a,b,c;
+	public Triangulo(double a, double b, double c) {
 		if(!esValido(a,b,c))
 			throw new LadosIlegalesException();
 		this.a = a;
 		this.b = b;
 		this.c = c;
 	}
-	private boolean esValido(int a, int b, int c) {
+	private static boolean esValido(double a, double b, double c) {
 		return a>0 && b>0 && c>0 && a+b>c && a+c>b && b+c>a;
 	}
 
@@ -20,23 +20,27 @@ public class Triangulo implements Comparable<Triangulo>{
 	}
 	@Override
 	public boolean equals(Object obj) {
+		boolean resultado;
 		if(obj==this)
-			return true;
-		if(obj instanceof Triangulo) {
+			resultado = true;
+		else if(obj instanceof Triangulo) {
 			Triangulo t=(Triangulo)obj;
-			return t.area()==area();
-		}
-		return false;
+			resultado = (t.area()==area());
+		} else
+			resultado = false;
+		return resultado;
 	}
 	
 	@Override
 	public int compareTo(Triangulo o) {
+		int sol;
 		if(area() < o.area())
-			return -1;
+			sol = -1;
 		else if(area() > o.area())
-			return 1;
-		else
-			return 0;
+			sol = 1;
+		else 
+			sol = 0;
+		return sol;
 	}
 	
 }

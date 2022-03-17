@@ -21,7 +21,7 @@ class PruebaColocarBarco_01 {
 	
 	@BeforeEach
 	void preparaBarcosYaPuestos_01() {
-		mundo=new Mundo();
+		mundo=new Mundo(6);
 		mundo.colocarBarco(0, 0, Direccion.HORIZONTAL, new Transatlantico());
 		mundo.colocarBarco(5, 0, Direccion.HORIZONTAL, new Transatlantico());
 		Consola.consola().desvelarMundo(mundo);
@@ -82,7 +82,7 @@ class PruebaColocarBarco_01 {
 	@Test
 	void testColocarBarcoFuera_01() {
 		Barco b = new Yate();
-		int f=9,c=9;
+		int f=5,c=5;
 		Consola.consola().mensaje(String.format("Colocando %s en %d,%d",b,f,c));
 		try {
 			assertTrue(mundo.colocarBarco(f, c, Direccion.VERTICAL, b));

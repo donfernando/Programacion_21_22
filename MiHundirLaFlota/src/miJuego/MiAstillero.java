@@ -16,15 +16,17 @@ public class MiAstillero extends Astillero{
 			return super.crearBarco(tipo);
 	}
 	
-	public static Barco[] getNuevaFlota(AbsAstillero miFactoria) {
+	public static Barco[] getNuevaFlota() {
 		int i;
-		Barco[] listaBarcos = new Barco[8];
-		for (i = 0; i < 3 ; i++) {
-			listaBarcos[i] = miFactoria.crearBarco('C');
+		AbsAstillero astillero = new MiAstillero();
+
+		Barco[] listaBarcos = new Barco[3];
+		for (i = 0; i < 2 ; i++) {
+			listaBarcos[i] = astillero.crearBarco('S');
 		}
-		for (; i < 8 ; i++) {
+		for (; i < 3 ; i++) {
 			//listaBarcos[i]= new Yate();
-			listaBarcos[i] = miFactoria.crearBarco('Y');
+			listaBarcos[i] = astillero.crearBarco('C');
 		}
 		
 		return listaBarcos;

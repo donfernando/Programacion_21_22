@@ -13,10 +13,16 @@ public class Mundo {
 		TOCADO, HUNDIDO, AGUA, YADISPARADO, GAMEOVER
 	};
 
-	private final static int TAMANIO = 10;
-	private Barco[][] tablero = new Barco[TAMANIO][TAMANIO];
-	private boolean[][] disparos = new boolean[TAMANIO][TAMANIO];
+	private Barco[][] tablero;
+	private boolean[][] disparos;
 	private int casillaConBarco=0;
+	
+	public Mundo(int tam) {
+		tablero = new Barco[tam][tam];
+		disparos = new boolean[tam][tam];
+	}
+	
+	
 	public int getFilas() {
 		return tablero.length;
 	}

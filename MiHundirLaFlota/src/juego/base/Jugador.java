@@ -11,7 +11,7 @@ public class Jugador {
 	protected Mundo miMundo;
 	protected String miNombre; 
 	public Jugador(String nombre) {
-		miMundo = new Mundo();
+		miMundo = new Mundo(5);
 		miNombre = nombre;
 	}
 

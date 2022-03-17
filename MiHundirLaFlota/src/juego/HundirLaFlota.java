@@ -17,33 +17,40 @@ public class HundirLaFlota {
 	
 	public static void main(String[] args) {
 		Estado e;		
-		Jugador jug_01 = new Humano("BLASA");
-		Jugador jug_02 = new Jugador("HAL");
-		Point p;
+		Humano jBlasa = new Humano("BLASA");
+		Jugador jHal = new Jugador("HAL");
 		
-		jug_01.colocarBarcosAutomatico(Astillero.getNuevaFlota(new MiAstillero()));
+		jBlasa.colocarBarcosAutomatico(Astillero.getNuevaFlota());
 //		Consola.consola().colocarBarcosInteracivo(jJhonny.getMundo(),
-//											MiAstillero.getNuevaFlota(new MiAstillero()));
+//											MiAstillero.getNuevaFlota());
 		
-		jug_02.colocarBarcosAutomatico(Astillero.getNuevaFlota(new MiAstillero()));
-		Consola.consola().mensaje("Tablero de "+jug_01.getNombre());
-		Consola.consola().desvelarMundo(jug_01.getMundo());
-		Consola.consola().mensaje("Tablero de "+jug_02.getNombre());
-		Consola.consola().desvelarMundo(jug_02.getMundo());
+		jHal.colocarBarcosAutomatico(Astillero.getNuevaFlota());
+		Consola.consola().mensaje("Tablero de "+jBlasa.getNombre());
+		Consola.consola().desvelarMundo(jBlasa.getMundo());
+		Consola.consola().mensaje("Tablero de "+jHal.getNombre());
+		Consola.consola().visualizarMundo(jHal.getMundo());
 
 		do {
 			do {
-				e=jug_01.disparar(jug_02.getMundo());
+//				e=jBlasa.disparar(jHal.getMundo());
+				e=jBlasa.disparar(jHal.getMundo(),
+						Consola.consola().leerCoordenadas("A dónde disparas...",jHal.getMundo().getFilas()));
 			} while(e.equals(Estado.YADISPARADO));
-			Consola.consola().mensaje(jug_01.getNombre() + " ha hecho... " + e);
+			Consola.consola().mensaje(jBlasa.getNombre() + " ha hecho... " + e);
 			do {
-			e=jug_02.disparar(jug_01.getMundo());
+			e=jHal.disparar(jBlasa.getMundo());
 			} while(e.equals(Estado.YADISPARADO));
-			Consola.consola().mensaje(jug_02.getNombre() + " ha hecho... " + e);
-			Consola.consola().mensaje("Tablero de "+jug_01.getNombre());
-			Consola.consola().desvelarMundo(jug_01.getMundo());
-			Consola.consola().mensaje("Tablero de "+jug_02.getNombre());
-			Consola.consola().desvelarMundo(jug_02.getMundo());
-		} while (jug_01.getMundo().quedanBarcos() && jug_02.getMundo().quedanBarcos());
+			Consola.consola().mensaje(jHal.getNombre() + " ha hecho... " + e);
+			Consola.consola().mensaje("Tablero de "+jBlasa.getNombre());
+			Consola.consola().desvelarMundo(jBlasa.getMundo());
+			Consola.consola().mensaje("Tablero de "+jHal.getNombre());
+			Consola.consola().visualizarMundo(jHal.getMundo());
+		} while (jBlasa.getMundo().quedanBarcos() && jHal.getMundo().quedanBarcos());
+		if(jBlasa.getMundo().quedanBarcos())
+			Consola.consola().mensaje("Gana: "+jBlasa.getNombre()+" !!!");
+		else if(jHal.getMundo().quedanBarcos())
+			Consola.consola().mensaje("Gana: "+jHal.getNombre()+" !!!");
+		else
+			Consola.consola().mensaje("Empate !!! ");
 	}
 }

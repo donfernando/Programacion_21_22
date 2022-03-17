@@ -24,9 +24,16 @@ public class Astillero extends AbsAstillero {
 		return b;
 	}
 	
-	public static Barco[] getNuevaFlota(AbsAstillero miFactoria) {
-		Barco[] listaBarcos = { new Acorazado(), new Transatlantico(), new Transatlantico(), new Submarino(),
-				new Submarino(), new Submarino(), new Yate(), new Yate(), new Yate(), new Yate() };
+	public static Barco[] getNuevaFlota() {
+		AbsAstillero astillero = new Astillero();
+		Barco[] listaBarcos = {
+//				new Acorazado(), 
+//				new Transatlantico(), 
+				astillero.crearBarco('A'),
+				astillero.crearBarco('T'),
+				astillero.crearBarco('S'),
+//				astillero.crearBarco('Y'),
+				};
 		return listaBarcos;
 	}
 	

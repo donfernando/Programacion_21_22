@@ -1,6 +1,7 @@
 package juego;
 
 import java.awt.Point;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import juego.base.Mundo;
@@ -83,16 +84,42 @@ public class Consola {
 	public void visualizarMundo(Mundo m) {
 		System.out.println(generaString(m, false));
 	}
-	public Point leerCoordenadas(String mensaje) {
+	public Point leerCoordenadas(String mensaje,int tope) {
 		String linea;
 		Point coord=new Point();
 		System.out.println(mensaje);
-		System.out.print("fila: ");
-		coord.x=in.nextInt();
+
+		// Lectura Fila...
+		try {
+			System.out.print("fila: ");
+			coord.x=in.nextInt();
+		} catch (InputMismatchException e) {
+			coord.x=-1;
+			in.nextLine();
+		}
+		while(coord.x<0 || coord.x>tope) {
+			System.out.println("fila inválida...(repita)");
+			try {
+				System.out.print("fila: ");
+				coord.x=in.nextInt();
+			} catch (InputMismatchException e) {
+				coord.x=-1;
+				in.nextLine();
+			}
+		}
+		
+		// Lectura Columna...
 		System.out.print("columna: ");
 		do {
 		} while ((linea = in.nextLine().trim()).length()==0);
 		coord.y=(linea.toUpperCase().charAt(0))-'A';
+		while(coord.y<0 || coord.y>tope) {
+			System.out.println("columna inválida...(repita)");
+			System.out.print("columna: ");
+			do {
+			} while ((linea = in.nextLine().trim()).length()==0);
+			coord.y=(linea.toUpperCase().charAt(0))-'A';
+		}
 		return coord;
 	}
 
@@ -116,12 +143,12 @@ public class Consola {
 		for (int i = 0; i < listaBarcos.length; i++) {
 			esYate = listaBarcos[i] instanceof Yate;
 			desvelarMundo(m);
-			p = leerCoordenadas("Coordenadas de nuevo " + listaBarcos[i] + ": ");
+			p = leerCoordenadas("Coordenadas de nuevo " + listaBarcos[i] + ": ", m.getFilas());
 			if(!esYate)
 				direc = leerDireccion("... y su orientación: ");
 			while (!m.colocarBarco(p.x, p.y, esYate?Direccion.HORIZONTAL:direc, listaBarcos[i])) {
 				mensaje("Problemas creando el barco...");
-				p = leerCoordenadas("Introduce de nuevo las coordenadas: ");
+				p = leerCoordenadas("Introduce de nuevo las coordenadas: ",m.getFilas());
 				if(!esYate)
 					direc = leerDireccion("... y su orientación: ");
 			}

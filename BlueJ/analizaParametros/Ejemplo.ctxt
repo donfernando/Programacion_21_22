@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Ejemplo
+comment1.params=sb
+comment1.target=void\ modifica(java.lang.StringBuffer)
+comment2.params=s
+comment2.target=void\ modifica(java.lang.String)
+comment3.params=p1
+comment3.target=void\ modifica(java.awt.Point)
+comment4.params=n
+comment4.target=void\ modifica(int)
+numComments=5

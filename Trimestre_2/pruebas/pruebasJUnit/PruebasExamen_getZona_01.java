@@ -85,8 +85,9 @@ class PruebasExamen_getZona_01 {
 		
 		try {
 			actual = Examen.getZona(new Point(3,3), new Point(1,1), datos);			
-			fail("Esta excepcion no se debería producir");			
+			assertArrayEquals(actual, esperable_01);
 		} catch (IndicesNoValidosException e) {
+			fail("Esta excepcion no se debería producir");			
 		} catch (Exception e) {
 			fail("Esta excepcion no se debería producir");
 		}

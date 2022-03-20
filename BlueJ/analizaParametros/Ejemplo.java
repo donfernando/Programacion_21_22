@@ -11,8 +11,8 @@ public class Ejemplo
         s=s+"xxxx";
        System.out.println(s);
     }
-    public static void modifica(Point p1) {
-        p1.x--;
+    public static void modifica(Point p) {
+        p.x++;
     }
     public static void modifica(int n) {
         n++;

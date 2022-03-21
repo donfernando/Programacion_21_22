@@ -1,7 +1,5 @@
 package pq1.contenedores;
 
-import javax.management.RuntimeErrorException;
-
 public class Pila<T> {
 	public final static int TAMANIO_INICIAL = 10;
 	public final static int TAMANIO_CRECIMIENTO = 10;
@@ -12,11 +10,11 @@ public class Pila<T> {
 	
 
 	@SuppressWarnings("unchecked")
-	private void asegurarEspacio() {
+	private void asegurarHueco() {
 		int i;
 		T[] tablaAux;
 		if (datos.length == cima) {
-			if(datos.length == TAMANIO_MAXIMO) {
+			if(datos.length >= TAMANIO_MAXIMO) {
 				throw new RuntimeException("No puede crecer más");
 			}
 			tablaAux = (T[])new Object[datos.length + TAMANIO_CRECIMIENTO];
@@ -27,7 +25,9 @@ public class Pila<T> {
 		}
 	}
 	public Pila<T> apilar(T dato){
-		asegurarEspacio();
+		if(dato==null)
+			throw new NullPointerException();
+		asegurarHueco();
 		datos[cima++]=dato;
 		//cima++;
 		return this;
@@ -36,10 +36,14 @@ public class Pila<T> {
 		T aux;
 		aux=datos[cima-1];
 		cima--;
+		datos[cima]=null;
 		return aux;
 	}
 	public boolean vacia() {
 		return cima==0;
+	}
+	public boolean llena() {
+		return datos.length>=TAMANIO_MAXIMO && datos.length==cima;
 	}
 	
 	

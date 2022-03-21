@@ -7,9 +7,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import pq1.contenedores.Pila;
+import pq1.contenedores.dinamico.Pila;
 
-class PruebaPila {
+class PruebaPilaDinamica {
 
 	private Pila<Integer> p;
 	
@@ -43,12 +43,8 @@ class PruebaPila {
 			fail("Error");
 		} catch (Exception e) {			
 		}
-		try {
-			p.apilar(5);
-			assertEquals(5, p.desapilar());
-		} catch (Exception e) {
-			fail("Error");			
-		}
+		p.apilar(5);
+		assertEquals(5, p.desapilar());
 	}
 	@Test
 	void testVacia() {

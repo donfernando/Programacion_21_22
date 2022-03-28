@@ -15,7 +15,6 @@ public class Pila<T> {
 			}
 		}
 	}
-
 	private Nodo cima;
 
 	@Override

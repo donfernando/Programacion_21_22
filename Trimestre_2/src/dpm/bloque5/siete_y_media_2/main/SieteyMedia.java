@@ -1,9 +1,7 @@
 package dpm.bloque5.siete_y_media_2.main;
 
-import dpm.bloque5.siete_y_media_2.Carta;
 import dpm.bloque5.siete_y_media_2.ManoSieteyMedia;
 import dpm.bloque5.siete_y_media_2.Mazo;
-import dpm.bloque5.siete_y_media_2.Palo;
 
 public class SieteyMedia {
 	public static void main(String[] args) {

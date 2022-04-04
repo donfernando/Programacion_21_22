@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ListaConNodoFicticeo()
+comment1.params=pos\ o
+comment1.target=void\ add(int,\ Object)
+comment2.params=pos
+comment2.target=Object\ remove(int)
+comment3.target=int\ size()
+comment4.target=String\ toString()
+comment5.params=pos\ obj
+comment5.target=void\ set(int,\ Object)
+comment6.params=pos
+comment6.target=Object\ get(int)
+comment7.target=Iterator\ iterator()
+numComments=8

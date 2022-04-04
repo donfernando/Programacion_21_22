@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=arg
+comment0.target=void\ main(String[])
+comment1.params=l
+comment1.target=void\ invertir(ListaConNodoFicticeo)
+numComments=2

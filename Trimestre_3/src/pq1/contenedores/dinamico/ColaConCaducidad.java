@@ -1,6 +1,7 @@
 package pq1.contenedores.dinamico;
 
-public class ColaConCaducidad<T> extends Cola<T> {
+
+public class ColaConCaducidad<T> extends Cola<T>{
 	private int segundos;
 
 	private class Nodo {
@@ -9,8 +10,8 @@ public class ColaConCaducidad<T> extends Cola<T> {
 		long entrada = System.currentTimeMillis();
 	}
 
-	private Nodo cabeza;
-	private Nodo cola;
+	private Nodo elPrimero;
+	private Nodo elUltimo;
 
 	public ColaConCaducidad(int segundos) {
 		this.segundos = segundos;
@@ -18,11 +19,33 @@ public class ColaConCaducidad<T> extends Cola<T> {
 
 	public T desacolar() {
 		T dato;
-		while ((System.currentTimeMillis() - cabeza.entrada)/1000 >= segundos) {
-			cabeza = cabeza.detras;
+		while ((System.currentTimeMillis() - elPrimero.entrada)/1000 >= segundos) {
+			elPrimero = elPrimero.detras;
 		}	
-		dato = cabeza.dato;
-		cabeza = cabeza.detras;
+		dato = elPrimero.dato;
+		elPrimero = elPrimero.detras;
 		return dato;
 	}
+	
+	public ColaConCaducidad<T> acolar(T dato) {
+		if (dato == null) {
+			throw new NullPointerException("No puede poner null");
+		}
+		Nodo nuevo;
+		nuevo = new Nodo();// crea la caja
+		nuevo.dato = dato;// metemos el dato
+		if (elPrimero == null) {
+			elPrimero = nuevo;
+		} else {
+			elUltimo.detras = nuevo;
+		}
+		elUltimo = nuevo;
+		return this;
+	}
+	
+	public boolean vacia() {
+		return elPrimero == null;
+	}
+	
+	
 }

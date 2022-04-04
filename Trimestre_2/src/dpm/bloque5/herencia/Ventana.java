@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 
 public class Ventana extends JFrame {
+	private static final long serialVersionUID = 1L;
+
 	public Ventana() {
 		super("Mi primera ventana");
 		setVisible(true);

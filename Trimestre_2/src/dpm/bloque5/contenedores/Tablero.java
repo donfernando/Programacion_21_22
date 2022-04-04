@@ -4,6 +4,7 @@ public class Tablero<T> {
 	protected T[][] datos;
 	public static int ANCHO_CASILLAS = 6;
 
+	@SuppressWarnings("unchecked")
 	public Tablero(int filas, int columnas) {
 		if (filas < 1 | columnas < 1)
 			throw new TableroException("El Tablero debe tener al menos una casilla");
@@ -47,8 +48,9 @@ public class Tablero<T> {
 			return true;
 		// else
 //		if(obj.getClass().getName().equals("Tablero")) {
-		if (obj instanceof Tablero) {
-			Tablero elOtro = (Tablero) obj;
+		if (obj instanceof Tablero<?>) {
+			@SuppressWarnings("unchecked")
+			Tablero<T> elOtro = (Tablero<T>) obj;
 			if (this.datos.length == elOtro.datos.length && this.datos[0].length == elOtro.datos[0].length) {
 				for (f = 0; f < datos.length; f++) {
 					for (c = 0; c < datos[f].length; c++) {

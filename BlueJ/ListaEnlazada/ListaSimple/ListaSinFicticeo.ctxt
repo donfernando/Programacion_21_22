@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=pos\ o
+comment0.target=void\ add(int,\ Object)
+comment1.params=pos
+comment1.target=Object\ remove(int)
+comment2.target=int\ size()
+comment3.target=String\ toString()
+numComments=4

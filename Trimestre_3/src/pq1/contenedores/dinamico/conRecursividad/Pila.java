@@ -1,4 +1,4 @@
-package pq1.contenedores.dinamico.alejandroAmaya;
+package pq1.contenedores.dinamico.conRecursividad;
 
 public class Pila<T> {
 	private class Nodo {

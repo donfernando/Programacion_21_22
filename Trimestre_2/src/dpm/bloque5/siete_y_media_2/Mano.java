@@ -1,7 +1,6 @@
 package dpm.bloque5.siete_y_media_2;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Mano {
 	protected Mazo mazo;

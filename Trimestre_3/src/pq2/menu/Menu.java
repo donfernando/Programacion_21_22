@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Menu implements IMenu {
 
 	private ArrayList<Opcion> listaOpciones = new ArrayList<>();
-	private boolean control = false;
-	private int posicion = 0;
+	private boolean nuevasOpcionesBloqueadas = false;
+	private int posSelect = 0;
 
 	public Menu(String op) {
 		Opcion aux = new Opcion(op);
@@ -15,13 +15,13 @@ public class Menu implements IMenu {
 	}
 
 	public void add(String op) {
-		if (control)
+		if (nuevasOpcionesBloqueadas)
 			throw new MenuIllegalEstateException();
 		listaOpciones.add(new Opcion(op));
 	}
 
 	public void add(int pos, String op) {
-		if (control)
+		if (nuevasOpcionesBloqueadas)
 			throw new MenuIllegalEstateException();
 		try {
 			listaOpciones.add(pos, new Opcion(op));
@@ -44,29 +44,29 @@ public class Menu implements IMenu {
 	}
 
 	public int next() {
-		listaOpciones.get(posicion).uncheck();
-		if (posicion == listaOpciones.size() - 1) {
-			posicion = 0;
-			listaOpciones.get(posicion).check();
+		listaOpciones.get(posSelect).uncheck();
+		if (posSelect == listaOpciones.size() - 1) {
+			posSelect = 0;
+			listaOpciones.get(posSelect).check();
 		} else {
-			posicion = posicion + 1;
-			listaOpciones.get(posicion).check();
+			posSelect = posSelect + 1;
+			listaOpciones.get(posSelect).check();
 		}
-		control = true;
-		return posicion;
+		nuevasOpcionesBloqueadas = true;
+		return posSelect;
 	}
 
 	public int previous() {
-		listaOpciones.get(posicion).uncheck();
-		if (posicion == 0) {
-			posicion = listaOpciones.size() - 1;
-			listaOpciones.get(posicion).check();
+		listaOpciones.get(posSelect).uncheck();
+		if (posSelect == 0) {
+			posSelect = listaOpciones.size() - 1;
+			listaOpciones.get(posSelect).check();
 		} else {
-			posicion = posicion - 1;
-			listaOpciones.get(posicion).check();
+			posSelect = posSelect - 1;
+			listaOpciones.get(posSelect).check();
 		}
-		control = true;
-		return posicion;
+		nuevasOpcionesBloqueadas = true;
+		return posSelect;
 	}
 
 	public int read() {
@@ -75,14 +75,14 @@ public class Menu implements IMenu {
 
 	public void select(int pos) {
 		if (pos >= 0 && pos <= listaOpciones.size() - 1) {
-			listaOpciones.get(posicion).uncheck();
-			posicion = pos;
-			listaOpciones.get(posicion).check();
+			listaOpciones.get(posSelect).uncheck();
+			posSelect = pos;
+			listaOpciones.get(posSelect).check();
 		}
 		else {
 			throw new MenuIndexOutOfBoundsException();
 		}
-		control = true;
+		nuevasOpcionesBloqueadas = true;
 
 	}
 

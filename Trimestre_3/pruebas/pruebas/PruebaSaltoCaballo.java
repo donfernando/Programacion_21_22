@@ -1,10 +1,11 @@
-package alejandro;
+package pruebas;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -15,12 +16,34 @@ import org.junit.jupiter.api.Test;
 
 import pq2.listas.Ejercicios;
 
-class pruebaSaltoCaballo {
+class PruebaSaltoCaballo {
 	List<Point> l;
 	
 	@AfterEach
 	void tearDown() throws Exception {
-		System.out.println(l);
+		//System.out.println(l);
+//		Point p;
+//		Iterator<Point> i = l.iterator();
+//		while(i.hasNext()) {
+//			p = i.next();
+//		System.out.printf("(%d,%d) ",p.x,p.y);
+//		}
+		
+		for (Point p : l) {
+			System.out.printf("(%d,%d) ",p.x,p.y);
+		}
+		System.out.println();
+	}
+
+	@Test
+	void testInicial() {
+		Set<Point> expected = new HashSet<>();
+		expected.add(new Point(5,6));
+		expected.add(new Point(6,5));
+		
+		l = Ejercicios.saltoCaballo(new Point(7,7));
+		Set<Point> obtenido = new HashSet<>(l);
+		assertEquals(expected, obtenido);
 	}
 
 	@Test
@@ -64,6 +87,7 @@ class pruebaSaltoCaballo {
 			l=Ejercicios.saltoCaballo(new Point(-4,7));
 			fail("Aquí no debería llegar.");
 		} catch (Exception e) {
+			l=new ArrayList<>();
 		}
 	}
 }

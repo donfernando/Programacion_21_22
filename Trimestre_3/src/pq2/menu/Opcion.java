@@ -5,7 +5,7 @@ public class Opcion {
 	private boolean selec = false;
 
 	public Opcion(String op) {
-		if(op != null && op.length()!=0 && !op.equals("\n")) {
+		if(op != null && op.length()!=0 && !op.contains("\n")) {
 			texto = op;
 		}
 		else {
@@ -30,7 +30,7 @@ public class Opcion {
 	}
 
 	public String toString() {
-//		String a = "";
+//		String a;
 //		if(seleccionada()) {
 //			a = "* " + getTexto();
 //		}

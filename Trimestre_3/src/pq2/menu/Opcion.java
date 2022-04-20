@@ -38,7 +38,7 @@ public class Opcion {
 //			a = getTexto();
 //		}
 //		return a;
-		return (seleccionada()?"* ":"")+getTexto();
+		return (selec?"* ":"")+texto;
 	}
 
 }

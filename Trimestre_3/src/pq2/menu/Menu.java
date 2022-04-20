@@ -6,7 +6,7 @@ public class Menu implements IMenu {
 
 	private ArrayList<Opcion> listaOpciones = new ArrayList<>();
 	private boolean nuevasOpcionesBloqueadas = false;
-	private int posSelect = 0;
+	private int opcActualSelect = 0;
 
 	public Menu(String op) {
 		Opcion aux = new Opcion(op);
@@ -34,63 +34,58 @@ public class Menu implements IMenu {
 		}
 	}
 	
-// TODO ...aún por revisar
 	public String get(int pos) {
-		String op = "";
-		if (pos >= 0 && pos <= listaOpciones.size() - 1) {
-			op = listaOpciones.get(pos).getTexto();
-		}
-		return op;
+		if (pos < 0 || pos >= listaOpciones.size())
+			throw new MenuIndexOutOfBoundsException();
+		return listaOpciones.get(pos).getTexto();
 	}
 
 	public int next() {
-		listaOpciones.get(posSelect).uncheck();
-		if (posSelect == listaOpciones.size() - 1) {
-			posSelect = 0;
-			listaOpciones.get(posSelect).check();
+		listaOpciones.get(opcActualSelect).uncheck();
+		if (opcActualSelect == listaOpciones.size() - 1) {
+			opcActualSelect = 0;
 		} else {
-			posSelect = posSelect + 1;
-			listaOpciones.get(posSelect).check();
+			opcActualSelect = opcActualSelect + 1;
 		}
+		listaOpciones.get(opcActualSelect).check();
 		nuevasOpcionesBloqueadas = true;
-		return posSelect;
+		return opcActualSelect;
 	}
 
 	public int previous() {
-		listaOpciones.get(posSelect).uncheck();
-		if (posSelect == 0) {
-			posSelect = listaOpciones.size() - 1;
-			listaOpciones.get(posSelect).check();
+		listaOpciones.get(opcActualSelect).uncheck();
+		if (opcActualSelect == 0) {
+			opcActualSelect = listaOpciones.size() - 1;
 		} else {
-			posSelect = posSelect - 1;
-			listaOpciones.get(posSelect).check();
+			opcActualSelect--;
 		}
+		listaOpciones.get(opcActualSelect).check();
 		nuevasOpcionesBloqueadas = true;
-		return posSelect;
+		return opcActualSelect;
 	}
 
 	public int read() {
-		return 1;
+		nuevasOpcionesBloqueadas = true;
+		return opcActualSelect;
 	}
 
 	public void select(int pos) {
-		if (pos >= 0 && pos <= listaOpciones.size() - 1) {
-			listaOpciones.get(posSelect).uncheck();
-			posSelect = pos;
-			listaOpciones.get(posSelect).check();
+		if (pos >= 0 && pos < listaOpciones.size()) {
+			listaOpciones.get(opcActualSelect).uncheck();
+			opcActualSelect = pos;
+			listaOpciones.get(opcActualSelect).check();
 		}
 		else {
 			throw new MenuIndexOutOfBoundsException();
 		}
 		nuevasOpcionesBloqueadas = true;
-
 	}
 
 	public String toString() {
-		String lista = "";
+		String txtMenu = "";
 		for (int i = 0; i < listaOpciones.size(); i++) {
-			lista = lista + "- " + listaOpciones.get(i).toString() + "\n";
+			txtMenu = txtMenu + "- " + listaOpciones.get(i) + "\n";
 		}
-		return lista;
+		return txtMenu;
 	}
 }

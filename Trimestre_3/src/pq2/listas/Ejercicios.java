@@ -4,6 +4,7 @@ import java.awt.Point;
 import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.RandomAccess;
 
@@ -19,7 +20,8 @@ public class Ejercicios {
 			new Point(1, 2), new Point(1, -2), new Point(-1, 2), new Point(-1, -2) };
 
 	public static List<Point> saltoCaballo(Point p) {
-		ArrayList<Point> l = new ArrayList<>();
+//		ArrayList<Point> l = new ArrayList<>();
+		LinkedList<Point> l = new LinkedList<>();
 		if (!dentroTablero(p))
 			throw new NullPointerException();
 		for (int i = 0; i < desplCaballo.length; i++) {

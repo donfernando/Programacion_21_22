@@ -22,14 +22,16 @@ class PruebaSaltoCaballo {
 	@AfterEach
 	void tearDown() throws Exception {
 		//System.out.println(l);
+		
 //		Point p;
 //		Iterator<Point> i = l.iterator();
 //		while(i.hasNext()) {
 //			p = i.next();
-//		System.out.printf("(%d,%d) ",p.x,p.y);
+//			System.out.printf("(%d,%d) ",p.x,p.y);
 //		}
+//		System.out.println();
 		
-		for (Point p : l) {
+		for(Point p : l) {
 			System.out.printf("(%d,%d) ",p.x,p.y);
 		}
 		System.out.println();

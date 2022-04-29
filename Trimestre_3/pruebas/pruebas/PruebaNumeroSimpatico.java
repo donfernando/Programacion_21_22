@@ -12,6 +12,8 @@ class PruebaNumeroSimpatico {
 	void test() {
 		assertTrue(NumeroSimpatico.valida(63));
 		assertFalse(NumeroSimpatico.valida(68));
+		assertTrue(NumeroSimpatico.valida(0));
+		assertFalse(NumeroSimpatico.valida(9));		
 	}
 
 }

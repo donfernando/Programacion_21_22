@@ -5,36 +5,54 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.Set;
 
 public class ConjuntoSimpatico extends AbstractSet<Integer>{
 	
 	private ArrayList<Integer> datos = new ArrayList<>();
 
 	
-//	public ConjuntoSimpatico() {
-//	}
-//	public ConjuntoSimpatico(Collection<Integer> c) {
-//		for (Integer i : c) {
-//			if(!datos.contains(i))
-//				datos.add(i);
-//		}
-//	}
+	public ConjuntoSimpatico() {
+	}
+	public ConjuntoSimpatico(Collection<Integer> c) {
+		for (Integer i : c) {
+			if(!datos.contains(i) && NumeroSimpatico.valida(i))
+				datos.add(i);
+		}
+	}
 	public ConjuntoSimpatico(int[] c) {
 		for (Integer i : c) {
-			if(!datos.contains(i))
+			if(!datos.contains(i) && NumeroSimpatico.valida(i))
 				datos.add(i);
 		}
 	}
 	
 //	@Override
-//	public boolean add(Integer e) {
-//		if(!datos.contains(e)) {
-//			datos.add(e);
+//	public boolean add(Integer i) {
+//		if(!NumeroSimpatico.valida(i))
+//			throw new IllegalArgumentException();
+//		if(!datos.contains(i)) {
+//			datos.add(i);
 //			return true;
 //		}
 //		return false;			
 //	}
 
+	
+	public static ConjuntoSimpatico union(Set<Integer> c1, Set<Integer> c2) {
+		ConjuntoSimpatico nuevo = new ConjuntoSimpatico();
+		for (Integer i : c1) {
+			if(!nuevo.datos.contains(i) && NumeroSimpatico.valida(i))
+				nuevo.datos.add(i);
+		}
+		for (Integer i : c2) {
+			if(!nuevo.datos.contains(i) && NumeroSimpatico.valida(i))
+				nuevo.datos.add(i);
+		}
+		return nuevo;
+	}
+	
+	
 	@Override
 	public int size() {
 		return datos.size();

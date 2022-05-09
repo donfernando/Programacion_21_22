@@ -1,0 +1,4 @@
+Número original: 2345
+Número original: -1
+Número original: 0
+Número original: 100

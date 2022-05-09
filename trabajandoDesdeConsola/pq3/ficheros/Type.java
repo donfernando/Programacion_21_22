@@ -11,13 +11,11 @@ public class Type {
 		int cod;
 		char ch;
 		if(args.length!=0) {
-//			f = new FileReader(args[0],Charset.forName("ISO-8859-15"));
 			f = new FileReader(args[0],Charset.forName("UTF8"));
 			cod=f.read();
 			while(cod != -1) {
 				ch = (char)cod;
-				System.out.printf("%c - (%d) - [%h]\n",ch,(int)ch,(int)ch);
-//				System.out.print(ch);
+				System.out.print(ch);
 				cod=f.read();				
 			}
 			f.close();
@@ -27,3 +25,4 @@ public class Type {
 	}
 
 }
+

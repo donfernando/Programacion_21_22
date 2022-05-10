@@ -4,7 +4,7 @@ import java.io.*;
 
 public class MuestraTableroPiezas {
 	public static void main(String[] args) throws IOException {
-		FileInputStream entrada = new FileInputStream("misFicheros/piezas.dat");
+		FileInputStream entrada = new FileInputStream("misFicheros/piezas2.dat");
 		char ficha;
 		int f,c;
 		char[][] tablero = new char[8][8];

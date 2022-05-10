@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichas>
+	<ficha>
+		<letra>P</letra>
+		<fila>2</fila>
+		<columna>6</columna>
+	</ficha>
+	<ficha>
+		<letra>P</letra>
+		<fila>4</fila>
+		<columna>2</columna>
+	</ficha>
+	<ficha>
+		<letra>T</letra>
+		<fila>7</fila>
+		<columna>7</columna>
+	</ficha>
+</fichas>

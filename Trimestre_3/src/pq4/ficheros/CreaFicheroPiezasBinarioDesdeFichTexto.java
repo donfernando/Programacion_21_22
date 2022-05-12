@@ -2,16 +2,17 @@ package pq4.ficheros;
 
 import java.awt.Point;
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 public class CreaFicheroPiezasBinarioDesdeFichTexto {
 
 	public static void main(String[] args) throws IOException {
-		FileReader entrada = new FileReader("misFicheros/piezas.txt");
+		FileReader entrada = new FileReader("misFicheros/piezas.txt",Charset.forName("UTF-8"));
 		FileOutputStream salida;
 
-		ArrayList<Character> caracteres = new ArrayList<>();
-		ArrayList<Point> puntos = new ArrayList<>();
+		ArrayList<Character> caracteres = new ArrayList<>(64);
+		ArrayList<Point> puntos = new ArrayList<>(64);
 
 		char letra;
 		int iLetra;

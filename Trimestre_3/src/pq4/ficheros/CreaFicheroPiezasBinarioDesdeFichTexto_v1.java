@@ -5,7 +5,7 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
-public class CreaFicheroPiezasBinarioDesdeFichTexto {
+public class CreaFicheroPiezasBinarioDesdeFichTexto_v1 {
 
 	public static void main(String[] args) throws IOException {
 		//FileReader entrada = new FileReader("misFicheros/piezas_retornoAOS.txt",Charset.forName("UTF-8"));

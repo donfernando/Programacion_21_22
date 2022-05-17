@@ -15,20 +15,23 @@ public class Manejador extends DefaultHandler {
    public int getFichas() {
 	return fichas;
    }
+	
    @Override
    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 	   if(qName.equals("ficha"))
 		   fichas++;
-   }
+  }
 
 //   @Override
 //   public void characters(char[] ch, int start, int length) throws SAXException {
-//	   System.out.println("--->"+new String(ch,start,length));
+//	   String s=new String(ch,start,length);
+//	   if(s.length()==1)
+//		   System.out.print(s);
 //   }
-//
+
 //   @Override
 //   public void endElement(String uri, String localName, String qName) throws SAXException {
-//	   System.out.println("FIN: "+qName);
+//   System.out.println("FIN: "+qName);
 //   }
 
 }

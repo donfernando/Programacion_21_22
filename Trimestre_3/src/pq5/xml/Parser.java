@@ -10,12 +10,13 @@ import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.SAXException;
 
 public class Parser {
-   public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-       SAXParserFactory factory = SAXParserFactory.newInstance();
-       SAXParser saxParser = factory.newSAXParser();
-//       Manejador miManejador = new Manejador();
-       GeneradoBinario miManejador = new GeneradoBinario();
-       saxParser.parse("misFicheros/piezas.xml", miManejador);
+	private static ManejadorGeneradoBinario miManejador;
 
-   }
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+		SAXParserFactory factory = SAXParserFactory.newInstance();
+		SAXParser saxParser = factory.newSAXParser();
+		Manejador miManejador = new Manejador();
+		saxParser.parse("misFicheros/piezas.xml", miManejador);
+		System.out.printf("Existen %d piezas de ajedrez en el tablero.\n", miManejador.getFichas());
+	}
 }

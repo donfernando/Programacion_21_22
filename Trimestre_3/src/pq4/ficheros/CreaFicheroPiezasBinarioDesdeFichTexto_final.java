@@ -28,6 +28,7 @@ public class CreaFicheroPiezasBinarioDesdeFichTexto_final {
 				fila++;
 				linea = entrada.readLine();
 			}
+			entrada.close();
 		} catch (IOException e) {
 			System.err.println("Problemas en la lectura del fichero...");
 		}
@@ -40,6 +41,7 @@ public class CreaFicheroPiezasBinarioDesdeFichTexto_final {
 				salida.write(puntos.get(i).x);
 				salida.write(puntos.get(i).y);
 			}
+			salida.close();
 		} 
 		catch (IOException e) {	
 			System.err.println("Problemas en la escritura del fichero...");

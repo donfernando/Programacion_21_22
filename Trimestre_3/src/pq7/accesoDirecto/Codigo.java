@@ -10,8 +10,9 @@ import java.util.Iterator;
 public class Codigo {
 	public static void main(String[] args) {
 		// prueba
-		String[] textos = {"Juan","Jesús","Antígona","Darío","Ana",
-							"Álvaro","Paula","Blas","Sandra","Dany"};
+		String[] textos = {"Juan      ","Jonás     ","Antonio   ",
+						   "David     ","Ana       ","Álvaro    ",
+						   "Paulo     ","Blasa     ","Sandra    "};
 		for (String s : textos) {
 			System.out.printf("'%s': %d\n",s,hash(s,25));
 		}

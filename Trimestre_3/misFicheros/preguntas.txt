@@ -1,0 +1,12 @@
+;Capital de La Palma
+Santa Cruz de Tenerife
+Santa Cruz de La Palma
+Palma de Mallorca
+;;2
+5
+;Capital de Mallorca
+Palma
+Las Palmas
+Ibiza
+;;1
+6

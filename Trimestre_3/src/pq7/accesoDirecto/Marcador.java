@@ -4,10 +4,12 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Marcador {
-	private class Reg {
+	private static class Reg implements Comparable<Reg>{
 		public final static int TAM_NOMBRE = 10;
 		public final static int TAM_REG = 
 				TAM_NOMBRE * Character.BYTES + Integer.BYTES;
@@ -30,14 +32,19 @@ public class Marcador {
 			nombre = String.format("%-" + TAM_NOMBRE + "s", nAjustado).toCharArray();
 			puntos = p;
 		}
+
+		@Override
+		public int compareTo(Reg o) {
+			return puntos-o.puntos;
+		}
 	}
 
 	RandomAccessFile fDirecto;
 	RandomAccessFile fExtra;
-	private final static int NUM_DATOS = 20;
+	public final static String POS_LIBRE = "##########";
+	public final static int NUM_DATOS = 20;
 	private final static int NUM_HUECOS = NUM_DATOS / 4;
 	private final static int NUM_POSICIONES = NUM_DATOS + NUM_HUECOS;
-	public final static String POS_LIBRE = "##########";
 
 	public Marcador(String nFich) throws IOException {
 		File f = new File(nFich+".dat");
@@ -56,9 +63,9 @@ public class Marcador {
 	 * @throws IOException 
 	 */
 	public int getPuntos(String nombre) throws IOException {
-		Reg buscado = new Reg(nombre,0);
-		if(new String(buscado.nombre).equals(POS_LIBRE))
+		if(nombre.equals(POS_LIBRE))
 			throw new IllegalArgumentException("Nombre inválido");
+		Reg buscado = new Reg(nombre,0);
 		Reg leido = new Reg();
 		boolean encontrado = false;
 		int posQueLeCorresponde=Codigo.hash(new String(buscado.nombre), NUM_POSICIONES);
@@ -155,7 +162,51 @@ public class Marcador {
 			fich.writeChars(POS_LIBRE);
 			fich.writeInt(0);
 		}
+		fich.seek(0);
 		return fich;
+	}
 
+	@Override
+	public String toString() {
+		String listadoMarcador = "Ranking de Puntuaciones\n"
+				+  "-----------------------\n";
+		String linea;
+		ArrayList<Reg> lista = new ArrayList<>();
+		Reg reg = new Reg();
+		String nombre;
+		try {
+			fDirecto.seek(0);
+			fExtra.seek(0);
+			try {
+				while(true) {
+					leeNombre(fDirecto, reg.nombre);
+					nombre = new String(reg.nombre);
+					reg.puntos = fDirecto.readInt();
+					if(!nombre.equals(POS_LIBRE)) {
+						lista.add(reg);
+						reg = new Reg();				
+					}
+				}
+			} catch (EOFException e) {}
+			try {
+				while(true) {
+					leeNombre(fExtra, reg.nombre);
+					nombre = new String(reg.nombre);
+					reg.puntos = fExtra.readInt();
+					lista.add(reg);
+					reg = new Reg();				
+				}
+			} catch (EOFException e) {}
+			Collections.sort(lista);
+			for (Reg r : lista) {
+				nombre = new String(r.nombre);
+				linea = String.format("%s: %2d puntos.\n",
+						nombre,r.puntos);
+				listadoMarcador += linea ;
+			}
+		} catch (IOException e) {
+			listadoMarcador += "Problemas leyendo marcador...\n";
+		}
+		return listadoMarcador;
 	}
 }

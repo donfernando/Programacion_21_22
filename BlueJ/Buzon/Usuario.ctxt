@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Usuario
+comment1.params=n
+comment1.target=Usuario(java.lang.String)
+comment2.params=f\ c\ o
+comment2.target=void\ mensaje(int,\ int,\ java.lang.Object)
+comment3.params=f\ c
+comment3.target=void\ print(int,\ int)
+numComments=4

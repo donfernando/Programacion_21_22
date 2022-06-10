@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Buzon
+comment1.params=
+comment1.target=Buzon()
+comment2.params=
+comment2.target=Buzon\ getBuzon()
+comment3.params=f\ c
+comment3.target=java.lang.Object\ get(int,\ int)
+comment4.params=f\ c\ o
+comment4.target=void\ set(int,\ int,\ java.lang.Object)
+numComments=5

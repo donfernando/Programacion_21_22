@@ -1,0 +1,8 @@
+inicia
+   20
+acumula
+12 tururu 8
+acumula
+4
+inicia
+9
